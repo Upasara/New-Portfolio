@@ -1,44 +1,136 @@
-import React from "react";
-import SpotlightCard from "../SpotlightCard";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import React from 'react';
+import {
+ Card,
+ CardContent,
+ CardDescription,
+ CardHeader,
+ CardTitle,
+} from '../ui/card';
 
-import image from "../../assets/me.jpg";
+import SmartSpend from '../../assets/projects/smart-spend.png';
+import { Button } from '../ui/button';
+import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
+import { Github } from 'lucide-react';
 
 const projects = [
-  {
-    title: "hello",
-    image: image,
-    description: "",
-    seeMore: "",
-    github: "",
-    link: "",
-  },
+ {
+  title: 'Smart Spend',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/Smart-Spend.git',
+  link: 'https://smart-spend-delta-opal.vercel.app/',
+ },
+ {
+  title: 'EMSys',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/EMSys.git',
+  link: 'https://pemco-emsys.vercel.app/',
+ },
+ {
+  title: 'Weather App',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/Weather-App.git',
+  link: 'https://weather-app-rouge-ten-35.vercel.app/',
+ },
+ {
+  title: 'TeFMaSys',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github:
+   'https://github.com/Upasara/Tea_Farmer_Management_System-Mobile_App.git',
+  link: '',
+ },
+ {
+  title: 'Smart Irrigation System',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/Smart-Irrigation-System_IOT.git',
+  link: '',
+ },
+ {
+  title: 'Rathaya',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/Rathaya.git',
+  link: '',
+ },
+ {
+  title: 'PEMcore',
+  image: SmartSpend,
+  description:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  seeMore:
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+  github: 'https://github.com/Upasara/PEMcore.git',
+  link: '',
+ },
 ];
 
 const Projects = () => {
-  return (
-    <div className="min-h-screen">
-      <h1>Projects</h1>
-      <div>
-        {projects.map((project, i) => (
-          <SpotlightCard
-            spotlightColor="rgba(0, 229, 255, 0.2)"
-            key={i}
-            className="bg-white border-none"
-          >
-            <Card>
-              <CardHeader>
-                <img src={project.image} />
-              </CardHeader>
-              <CardContent>
-                <CardTitle>{project.title}</CardTitle>
-              </CardContent>
-            </Card>
-          </SpotlightCard>
-        ))}
+ return (
+  <div className='min-h-screen p-5'>
+   <h1>Projects</h1>
+   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    {projects.map((project) => (
+     <Card>
+      <CardHeader>
+       <img src={project.image} />
+      </CardHeader>
+      <CardContent>
+       <CardTitle>{project.title}</CardTitle>
+       <CardDescription>
+        <div>
+         <div>{project.description}</div>
+         <div>
+          <Drawer>
+           <DrawerTrigger asChild>
+            <Button variant='ghost'>See more...</Button>
+           </DrawerTrigger>
+           <DrawerContent>{project.seeMore}</DrawerContent>
+          </Drawer>
+         </div>
+        </div>
+       </CardDescription>
+      </CardContent>
+      <div className='flex items-center justify-between'>
+       {project.link && (
+        <Button variant='outline' asChild>
+         <a href={project.link}>Live Demo</a>
+        </Button>
+       )}
+       {project.github && (
+        <Button variant='ghost'>
+         <a href={project.github}>
+          <Github />
+         </a>
+        </Button>
+       )}
       </div>
-    </div>
-  );
+     </Card>
+    ))}
+   </div>
+  </div>
+ );
 };
 
 export default Projects;
