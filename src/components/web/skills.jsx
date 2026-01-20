@@ -74,9 +74,9 @@ const toolLogo = [
  { src: figma, alt: 'Figma', title: 'Figma' },
 ];
 
-const Skills = () => {
+const Skills = ({ id }) => {
  return (
-  <div className='p-5 bg-green-50'>
+  <div id={id} className='p-5 bg-green-50'>
    <h1>Skills</h1>
    {/* front-end */}
    <div>

@@ -86,13 +86,13 @@ const projects = [
  },
 ];
 
-const Projects = () => {
+const Projects = ({ id }) => {
  return (
-  <div className='min-h-screen p-5'>
+  <section id={id} className='min-h-screen p-5'>
    <h1>Projects</h1>
    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-    {projects.map((project) => (
-     <Card>
+    {projects.map((project, i) => (
+     <Card key={i}>
       <CardHeader>
        <img src={project.image} />
       </CardHeader>
@@ -129,7 +129,7 @@ const Projects = () => {
      </Card>
     ))}
    </div>
-  </div>
+  </section>
  );
 };
 
