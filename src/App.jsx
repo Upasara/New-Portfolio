@@ -13,14 +13,14 @@ import Contact from './components/web/contact';
 import { useRef } from 'react';
 import Navbar from './components/web/navbar';
 import ClickSpark from './components/ClickSpark';
-import FloatingLines from './components/FloatingLines';
+import { Meteors } from './components/ui/meteors';
 
 function App() {
  const lenisRef = useRef(null);
 
  // Initialize AOS and Lenis smooth scroll
  useEffect(() => {
-  Aos.init({ duration: 1000 });
+  Aos.init({ duration: 1000, once: false });
 
   const lenis = new Lenis({
    duration: 0.5,
@@ -48,7 +48,7 @@ function App() {
  };
 
  return (
-  <div>
+  <div className=' text-primary-text'>
    <ClickSpark
     sparkColor='#000000'
     sparkSize={10}
