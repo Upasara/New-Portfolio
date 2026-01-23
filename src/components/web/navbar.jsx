@@ -27,8 +27,8 @@ const Navbar = ({ navigate }) => {
  ];
 
  return (
-  <nav className='fixed bottom-10 z-50 left-1/2 -translate-x-1/2  rounded-full px-3 py-1 glassmorphism'>
-   <ul className='flex gap-5  '>
+  <nav className='fixed bottom-10 z-50 left-1/2 -translate-x-1/2  rounded-full px-3 py-1 bg-white'>
+   <ul className='flex gap-5 md:gap-7  '>
     {navItems.map((items) => (
      <li key={items.target} className='flex'>
       <Tooltip>
@@ -40,7 +40,9 @@ const Navbar = ({ navigate }) => {
          <div>{items.icon}</div>
         </button>
        </TooltipTrigger>
-       <TooltipContent>{items.label}</TooltipContent>
+       <TooltipContent className='bg-white text-black'>
+        {items.label}
+       </TooltipContent>
       </Tooltip>
      </li>
     ))}

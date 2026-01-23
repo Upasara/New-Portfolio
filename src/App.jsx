@@ -13,7 +13,6 @@ import Contact from './components/web/contact';
 import { useRef } from 'react';
 import Navbar from './components/web/navbar';
 import ClickSpark from './components/ClickSpark';
-import { Meteors } from './components/ui/meteors';
 
 function App() {
  const lenisRef = useRef(null);
@@ -26,15 +25,22 @@ function App() {
    duration: 0.5,
    smoothWheel: true,
    easing: (t) => t,
+   prevent: (node) => node?.hasAttribute('data-lenis-prevent'),
   });
 
   lenisRef.current = lenis;
 
-  function raf(time) {
+  let rafId;
+  const raf = (time) => {
    lenis.raf(time);
-   requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+   rafId = requestAnimationFrame(raf);
+  };
+  rafId = requestAnimationFrame(raf);
+
+  return () => {
+   cancelAnimationFrame(rafId);
+   lenis.destroy();
+  };
  }, []);
 
  const scrollToSection = (id) => {
@@ -48,7 +54,7 @@ function App() {
  };
 
  return (
-  <div className=' text-primary-text'>
+  <div className=' text-primary-text bg-primary-bg'>
    <ClickSpark
     sparkColor='#000000'
     sparkSize={10}
