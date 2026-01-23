@@ -30,11 +30,9 @@ export const StickyScroll = ({ content, contentClassName }) => {
   setActiveCard(closestBreakpointIndex);
  });
 
- const backgroundColors = ['#fafafa', '#fafafa', '#fafafa'];
+ const backgroundColors = [];
  const linearGradients = [
-  'linear-gradient(to bottom right, #06b6d4, #10b981)', // cyan-500 to emerald-500
-  'linear-gradient(to bottom right, #ec4899, #6366f1)', // pink-500 to indigo-500
-  'linear-gradient(to bottom right, #f97316, #eab308)', // orange-500 to yellow-500
+  '', // orange-500 to yellow-500
  ];
 
  const [backgroundGradient, setBackgroundGradient] = useState(
@@ -51,7 +49,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
     backgroundColor: backgroundColors[activeCard % backgroundColors.length],
    }}
    data-lenis-prevent
-   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto shadow-md rounded-lg p-10'
+   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto     rounded-lg p-10'
    ref={ref}
   >
    <div className='div relative flex items-start px-1 lg:px-4'>
@@ -76,7 +74,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
         animate={{
          opacity: activeCard === index ? 1 : 0.3,
         }}
-        className='text-base md:text-lg mt-10 max-w-md  text-primary-text text-justify'
+        className='text-lg md:text-xl leading-relaxed  mt-10 max-w-md font-manrope text-primary-text text-justify'
        >
         {item.description}
        </motion.p>
@@ -88,7 +86,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
    <div
     style={{ background: backgroundGradient }}
     className={cn(
-     'sticky top-15 hidden h-60 w-96 overflow-hidden rounded-md bg-white lg:block',
+     'sticky top-5 hidden  h-90 w-96 overflow-hidden rounded-md bg-white lg:block',
      contentClassName
     )}
    >

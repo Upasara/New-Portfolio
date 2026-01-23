@@ -1,7 +1,7 @@
 import React from 'react';
 import Stack from '../Stack';
-import ME from '../../assets/me.jpg';
-import F1 from '../../assets/f1.jpg';
+import ME from '../../assets/me1.jpg';
+import ME2 from '../../assets/me2.jpg'
 import GYM from '../../assets/gym.jpg';
 import { Button } from '../ui/moving-border';
 import GradientIcon from './gradient-icon';
@@ -16,7 +16,7 @@ const images = [
   text: 'My Self',
  },
  {
-  image: F1,
+  image: ME2,
   text: 'I like cars',
  },
  {
@@ -31,8 +31,8 @@ const data = [
   description:
    'I am a web developer with practical experience building and maintaining web-based systems for real business use. At P E Mathew & Company, I developed internal systems such as an HR management platform, a centralized data storage solution, and I continue to maintain the company’s website and blog used in daily operations.',
   content: (
-   <div>
-    <img src={ME} alt='My Self' className='w-full h-auto rounded-lg' />
+   <div className='flex justify-center '>
+    <img src={ME} alt='My Self' className='w-full max-w-md h-auto rounded-lg object-cover' />
    </div>
   ),
  },
@@ -42,7 +42,7 @@ const data = [
    'Previously, I worked as a System Testing and Support Intern at Nature’s Beauty Creations, where I tested systems, identified bugs, and supported live environments. This role helped me understand how real systems operate and the importance of stability and usability.',
   content: (
    <div>
-    <img src={F1} alt='My Self' className='w-full h-auto rounded-lg' />
+    <img src={ME2} alt='My Self' className='w-full h-auto rounded-lg' />
    </div>
   ),
  },
@@ -60,13 +60,13 @@ const data = [
 
 const Bio = ({ id }) => {
  return (
-  <section id={id} className='min-h-screen  p-5 md:p-10'>
+  <section id={id} className='min-h-screen bg-secondary-bg p-5 md:p-10'>
    <h1 className='text-center text-gradient font-poppins font-semibold text-5xl mb-5'>
     Get To Know Me
    </h1>
 
    <div className=''>
-    <div className='flex items-center justify-center w-full h-64 mx-auto mb-10'>
+    <div className='lg:hidden flex items-center justify-center w-full h-64 mx-auto mb-10'>
      <Stack
       randomRotation={true}
       sensitivity={150}
@@ -82,7 +82,7 @@ const Bio = ({ id }) => {
       ))}
      />
     </div>
-    <div className=' w-full lg:w-9/12 mx-auto  py-4 cursor-all-scroll'>
+    <div className=' w-full lg:w-10/12 mx-auto  py-4 cursor-all-scroll'>
      <StickyScroll content={data} contentClassName={'bg-trasparent'} />
     </div>
    </div>
