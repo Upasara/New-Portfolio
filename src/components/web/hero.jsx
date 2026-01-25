@@ -6,7 +6,6 @@ import GradientIcon from './gradient-icon';
 import { Linkedin } from 'lucide-react';
 import { Github } from 'lucide-react';
 import { Instagram } from 'lucide-react';
-import { Meteors } from '../ui/meteors';
 import { FolderOpen } from 'lucide-react';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { FlipWords } from '../ui/flip-words';
@@ -24,7 +23,6 @@ const flipWords = [
 const Hero = ({ id }) => {
  return (
   <>
-   <Meteors number={30} className='before:from-violet-700 before:opacity-0 ' />
    <div
     id={id}
     className=' lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 p-5 '

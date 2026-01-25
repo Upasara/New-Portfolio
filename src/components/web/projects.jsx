@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import {
  Card,
  CardContent,
@@ -11,6 +11,7 @@ import SmartSpend from '../../assets/projects/smart-spend.png';
 import { Button } from '../ui/button';
 import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
 import { Github } from 'lucide-react';
+import ElectricBorder from '../ElectricBorder';
 
 const projects = [
  {
@@ -88,13 +89,17 @@ const projects = [
 
 const Projects = ({ id }) => {
  return (
-  <section id={id} className='min-h-screen p-5'>
-   <h1>Projects</h1>
-   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+  <section id={id} className='min-h-screen p-5 md:p-10 '>
+   <h1 className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10'>Projects</h1>
+   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
     {projects.map((project, i) => (
-     <Card key={i}>
+    <ElectricBorder color="#7df9ff"
+  speed={1}
+  chaos={0.12}
+  thickness={2}>
+     <Card key={i} className=''>
       <CardHeader>
-       <img src={project.image} />
+       <img src={project.image} className='rounded-md shadow-md' />
       </CardHeader>
       <CardContent>
        <CardTitle>{project.title}</CardTitle>
@@ -127,6 +132,7 @@ const Projects = ({ id }) => {
        )}
       </div>
      </Card>
+     </ElectricBorder>
     ))}
    </div>
   </section>

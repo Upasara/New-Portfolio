@@ -64,7 +64,7 @@ function App() {
    >
     <Navbar navigate={scrollToSection} />
     <Hero id='hero' />
-    <Bio id='bio' />
+    <Bio id='bio' navigate={scrollToSection} />
     <Projects id='projects' />
     <Skills id='skills' />
     <Experience id='experience' />

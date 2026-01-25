@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useMotionValueEvent, useScroll } from 'motion/react';
 import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
+import { Mouse } from 'lucide-react';
+import { MoveDown } from 'lucide-react';
 
 export const StickyScroll = ({ content, contentClassName }) => {
  const [activeCard, setActiveCard] = React.useState(0);
@@ -49,13 +51,15 @@ export const StickyScroll = ({ content, contentClassName }) => {
     backgroundColor: backgroundColors[activeCard % backgroundColors.length],
    }}
    data-lenis-prevent
-   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto     rounded-lg p-10'
+   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto  rounded-lg p-1 md:p-10 bg-white '
    ref={ref}
   >
-   <div className='div relative flex items-start px-1 lg:px-4'>
-    <div className='max-w-2xl'>
+    {/* scroll image */}
+    <div className=' md:flex flex-col justify-center text-gray-400 space-y-5  hidden md:mr-7 lg:mr-0' ><Mouse className='animate-pulse'/><MoveDown className='animate-pulse' /></div>
+   <div className='div relative flex items-start px-1 lg:px-4 '>
+    <div className='max-w-2xl  '>
      {content.map((item, index) => (
-      <div key={item.title + index} className='my-20'>
+      <div key={item.title + index} className='my-5 md:my-20'>
        <motion.h2
         initial={{
          opacity: 0,
@@ -74,7 +78,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
         animate={{
          opacity: activeCard === index ? 1 : 0.3,
         }}
-        className='text-lg md:text-xl leading-relaxed  mt-10 max-w-md font-manrope text-primary-text text-justify'
+        className='text-lg md:text-xl leading-relaxed  mt-10 max-w-md  text-primary-text text-justify'
        >
         {item.description}
        </motion.p>
