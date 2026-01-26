@@ -54,7 +54,7 @@ function App() {
  };
 
  return (
-  <div className=' text-primary-text bg-primary-bg'>
+  <div className=' text-primary-text bg-primary-bg '>
    <ClickSpark
     sparkColor='#000000'
     sparkSize={10}

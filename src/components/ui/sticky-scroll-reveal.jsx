@@ -51,11 +51,14 @@ export const StickyScroll = ({ content, contentClassName }) => {
     backgroundColor: backgroundColors[activeCard % backgroundColors.length],
    }}
    data-lenis-prevent
-   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto  rounded-lg p-1 md:p-10 bg-white '
+   className='relative flex h-[30rem] justify-center space-x-0 lg:space-x-10 overflow-y-auto  rounded-lg p-1 md:p-10 '
    ref={ref}
   >
-    {/* scroll image */}
-    <div className=' md:flex flex-col justify-center text-gray-400 space-y-5  hidden md:mr-7 lg:mr-0' ><Mouse className='animate-pulse'/><MoveDown className='animate-pulse' /></div>
+   {/* scroll image */}
+   <div className=' md:flex flex-col justify-center text-gray-400 space-y-5  hidden md:mr-7 lg:mr-0'>
+    <Mouse className='animate-pulse' />
+    <MoveDown className='animate-pulse' />
+   </div>
    <div className='div relative flex items-start px-1 lg:px-4 '>
     <div className='max-w-2xl  '>
      {content.map((item, index) => (
