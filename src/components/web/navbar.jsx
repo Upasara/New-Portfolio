@@ -3,27 +3,33 @@ import { CodeXml } from 'lucide-react';
 import { NotebookTabs } from 'lucide-react';
 import { BriefcaseBusiness } from 'lucide-react';
 import { FolderOpen } from 'lucide-react';
-import { Home } from 'lucide-react';
 import React from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
-import GradientIcon from './gradient-icon';
+
+import { HomeIcon } from '../ui/home';
+import { UserIcon } from '../ui/user';
+import { FoldersIcon } from '../ui/folders';
+import { FolderCodeIcon } from '../ui/folder-code';
+import { ChevronsLeftRightIcon } from '../ui/chevrons-left-right';
+import { LaptopMinimalCheckIcon } from '../ui/laptop-minimal-check';
+import { ConnectIcon } from '../ui/connect';
 
 const Navbar = ({ navigate }) => {
  const navItems = [
   {
-   icon: <GradientIcon Icon={Home} />,
+   icon: <HomeIcon />,
    label: 'Home',
    target: 'hero',
   },
-  { icon: <User />, label: 'About Me', target: 'bio' },
-  { icon: <FolderOpen />, label: 'Projects', target: 'projects' },
-  { icon: <CodeXml />, label: 'Skills', target: 'skills' },
+  { icon: <UserIcon />, label: 'About Me', target: 'bio' },
+  { icon: <FoldersIcon />, label: 'Projects', target: 'projects' },
+  { icon: <ChevronsLeftRightIcon />, label: 'Skills', target: 'skills' },
   {
-   icon: <BriefcaseBusiness />,
+   icon: <LaptopMinimalCheckIcon />,
    label: 'Experience',
    target: 'experience',
   },
-  { icon: <NotebookTabs />, label: 'Contact', target: 'contact' },
+  { icon: <ConnectIcon />, label: 'Contact', target: 'contact' },
  ];
 
  return (
@@ -37,7 +43,7 @@ const Navbar = ({ navigate }) => {
          onClick={() => navigate(items.target)}
          className='group hover:-translate-y-2 hover:text-4xl duration-300 transition-all'
         >
-         <div>{items.icon}</div>
+         <div className=''>{items.icon}</div>
         </button>
        </TooltipTrigger>
        <TooltipContent className='bg-white text-black'>

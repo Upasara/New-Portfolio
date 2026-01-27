@@ -12,6 +12,10 @@ import { FlipWords } from '../ui/flip-words';
 import { CardBody, CardContainer } from '../ui/3d-card';
 import { FolderClosed } from 'lucide-react';
 import { LinkPreview } from '../ui/link-preview';
+import { HardDriveDownloadIcon } from '../ui/hard-drive-download';
+import { DownloadIcon } from '../ui/download';
+import { useRef } from 'react';
+import { FoldersIcon } from '../ui/folders';
 
 const flipWords = [
  'Software Engineer',
@@ -21,6 +25,8 @@ const flipWords = [
 ];
 
 const Hero = ({ id }) => {
+ const iconRef = useRef(null);
+ const iconRef2 = useRef(null);
  return (
   <>
    <div
@@ -81,16 +87,21 @@ const Hero = ({ id }) => {
      >
       <Button
        variant='outline'
-       className='text-violet-600 group border-violet-600 border-2 hover:text-violet-600 hover:shadow-md hover:bg-white'
+       className=' text-violet-600 group border-violet-600 border-2 hover:text-violet-600 hover:shadow-md hover:bg-white'
        size='sm'
+       onMouseEnter={() => iconRef.current.startAnimation()}
+       onMouseLeave={() => iconRef.current.stopAnimation()}
       >
        Resume
-       <ArrowDownToLine className='group-hover:translate-y-0.5 duration-300 text-fuchsia-600' />
+       <DownloadIcon ref={iconRef} />
       </Button>
-      <Button className='bg-gradient group' size='sm'>
-       View Projects{' '}
-       <FolderOpen className='group-hover:block hidden  transition-all  group-hover:scale-110 duration-300' />
-       <FolderClosed className='group-hover:hidden transition-all duration-300' />
+      <Button
+       className='bg-gradient group'
+       size='sm'
+       onMouseEnter={() => iconRef2.current.startAnimation()}
+       onMouseLeave={() => iconRef2.current.stopAnimation()}
+      >
+       View Projects <FoldersIcon ref={iconRef2} />
       </Button>
      </div>
      {/* social */}

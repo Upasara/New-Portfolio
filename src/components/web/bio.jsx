@@ -8,6 +8,8 @@ import { BriefcaseBusiness } from 'lucide-react';
 import { FolderOpen } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
+import { useRef } from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const images = [
  {
@@ -62,6 +64,7 @@ const data = [
 ];
 
 const Bio = ({ id, navigate }) => {
+ const iconRef = useRef(null);
  return (
   <section
    id={id}

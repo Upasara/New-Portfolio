@@ -56,8 +56,8 @@ export const StickyScroll = ({ content, contentClassName }) => {
   >
    {/* scroll image */}
    <div className=' md:flex flex-col justify-center text-gray-400 space-y-5  hidden md:mr-7 lg:mr-0'>
-    <Mouse className='animate-pulse' />
-    <MoveDown className='animate-pulse' />
+    <Mouse className='' />
+    <MoveDown className='animate-bounce' />
    </div>
    <div className='div relative flex items-start px-1 lg:px-4 '>
     <div className='max-w-2xl  '>
