@@ -1,4 +1,11 @@
 import React from 'react';
+import { Timeline } from '../ui/timeline';
+
+//images
+import pemco from '../../assets/comapany_logo/pemco.png';
+import nbc from '../../assets/comapany_logo/nbc.png';
+import ply from '../../assets/comapany_logo/ply.png';
+import ritti from '../../assets/comapany_logo/ritti.png';
 
 const experiences = [
  {
@@ -33,49 +40,89 @@ const experiences = [
 ];
 
 const Experience = ({ id }) => {
+ const data = [
+  {
+   title: 'IT Assistant',
+   content: (
+    <div className='flex flex-col gap-4'>
+     {/* header */}
+     <div className='flex flex-row gap-3'>
+      {/* logo */}
+      <div>
+       <img src={pemco} alt='PEMCO' className='h-10 w-auto' />
+      </div>
+      {/* name */}
+      <div>
+       <h3>P E Mathew & Company</h3>
+       <p>October 2024 - Present</p>
+      </div>
+     </div>
+     {/* description */}
+     <div>
+      <p>
+       Tested and validated a new internal sales system, identified bugs, and
+       collaborated with the sales team to improve system reliability.
+      </p>
+     </div>
+    </div>
+   ),
+  },
+  {
+   title: 'IT Assistant',
+   content: (
+    <div className='flex flex-col gap-4'>
+     {/* header */}
+     <div className='flex flex-row gap-3'>
+      {/* logo */}
+      <div>
+       <img src={pemco} alt='PEMCO' className='h-10 w-auto' />
+      </div>
+      {/* name */}
+      <div>
+       <h3>P E Mathew & Company</h3>
+       <p>October 2024 - Present</p>
+      </div>
+     </div>
+     {/* description */}
+     <div>
+      <p>
+       Tested and validated a new internal sales system, identified bugs, and
+       collaborated with the sales team to improve system reliability.
+      </p>
+     </div>
+    </div>
+   ),
+  },
+  {
+   title: 'IT Assistant',
+   content: (
+    <div className='flex flex-col gap-4'>
+     {/* header */}
+     <div className='flex flex-row gap-3'>
+      {/* logo */}
+      <div>
+       <img src={pemco} alt='PEMCO' className='h-10 w-auto' />
+      </div>
+      {/* name */}
+      <div>
+       <h3>P E Mathew & Company</h3>
+       <p>October 2024 - Present</p>
+      </div>
+     </div>
+     {/* description */}
+     <div>
+      <p>
+       Tested and validated a new internal sales system, identified bugs, and
+       collaborated with the sales team to improve system reliability.
+      </p>
+     </div>
+    </div>
+   ),
+  },
+ ];
  return (
   <section id={id} className='relative mx-auto max-w-5xl py-20 p'>
-   {/* Section Heading */}
-   <h2 className='mb-16 text-center text-3xl font-bold'>
-    Experience & Education
-   </h2>
-
-   {/* Center vertical line */}
-   <div className='absolute left-4 top-44 bottom-20 w-px bg-gray-300 md:left-1/2 md:-translate-x-1/2' />
-
-   <div className='space-y-16'>
-    {experiences.map((exp, index) => {
-     const isLeft = index % 2 === 0;
-
-     return (
-      <div
-       key={index}
-       className={`relative flex w-full ${
-        isLeft ? 'md:justify-start' : 'md:justify-end'
-       }`}
-      >
-       {/* Timeline dot */}
-       <span className='absolute left-2 top-6 h-4 w-4 rounded-full bg-black md:left-1/2 md:-translate-x-1/2' />
-
-       {/* Card */}
-       <div
-        className={`
-                  ml-12 w-full max-w-md rounded-lg border bg-white p-6 shadow-md
-                  md:ml-0
-                  ${isLeft ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}
-                `}
-       >
-        <h3 className='text-lg font-semibold'>{exp.role}</h3>
-        <p className='text-sm text-gray-500'>
-         {exp.company} • {exp.period}
-        </p>
-
-        <p className='mt-3 text-sm text-gray-700'>{exp.description}</p>
-       </div>
-      </div>
-     );
-    })}
-   </div>
+   <Timeline data={data} />
   </section>
  );
 };

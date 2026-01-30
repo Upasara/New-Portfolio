@@ -16,14 +16,20 @@ import { Badge } from '../ui/badge';
 import { LinkIcon } from '../ui/link';
 import { useRef } from 'react';
 import { GithubIcon } from '../ui/github';
-import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
+import {
+ Carousel,
+ CarouselContent,
+ CarouselItem,
+ CarouselNext,
+ CarouselPrevious,
+} from '../ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 const projects = [
  {
   title: 'Smart Spend 💸',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, ',
+   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, sequi recusandae sit maxime qui, labore culpa, ',
   seeMore:
    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
   github: 'https://github.com/Upasara/Smart-Spend.git',
@@ -117,7 +123,7 @@ const Projects = ({ id }) => {
        <div data-aos='fade-up' data-aos-delay={i * 100}>
         <Card
          key={i}
-         className='p-0 hover:scale-105 transition-transform duration-300 hover:shadow-lg'
+         className='p-0 hover:scale-105 transition-transform duration-300 hover:shadow-lg cursor-pointer'
         >
          <CardHeader className='p-2.5 pb-0'>
           <Carousel
@@ -151,7 +157,12 @@ const Projects = ({ id }) => {
               </Badge>
              ))}
             </div>
-            <div className='pb-5 text-justify'>{project.description}</div>
+            <div className='pb-5 text-justify'>
+             {project.description}
+             <span className='ml-1 tracking-wide font-semibold font-mono '>
+              SEE MORE...
+             </span>
+            </div>
            </div>
            <div className='flex items-center justify-between px-2'>
             {project.github && (
@@ -162,7 +173,7 @@ const Projects = ({ id }) => {
               className='relative overflow-hidden border-2 border-purple-600 text-purple-600 shadow-sm hover:shadow-lg  transition-all 
            duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 
            before:w-0 before:rounded-sm before:bg-gradient-to-r before:from-fuchsia-600 before:via-purple-600 before:to-violet-600 before:duration-300 before:ease-out hover:text-white 
-           hover:shadow-indigo-600 hover:before:h-40 hover:before:w-40 hover:before:opacity-80'
+            hover:before:h-40 hover:before:w-40 hover:before:opacity-80'
               onMouseEnter={() => iconRef2.current[i]?.startAnimation()}
               onMouseLeave={() => iconRef2.current[i]?.stopAnimation()}
              >
@@ -202,7 +213,39 @@ const Projects = ({ id }) => {
         </Card>
        </div>
       </DrawerTrigger>
-      <DrawerContent>{project.seeMore}</DrawerContent>
+      <DrawerContent>
+       <h2 className='text-center text-lg md:text-2xl pt-5  font-normal font-poppins tracking-wide text-shadow-2xs'>
+        {project.title}
+       </h2>
+       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 p-5 md:px-15 md:py-10'>
+        <div className='shadow-md'>
+         <Carousel>
+          <CarouselContent>
+           {project.image.map((image, i) => (
+            <CarouselItem key={i}>
+             <img
+              src={image}
+              className='rounded-md h-52 md:h-80 w-full object-cover shadow-md'
+             />
+            </CarouselItem>
+           ))}
+          </CarouselContent>
+          <CarouselPrevious className='hidden md:grid' />
+          <CarouselNext className='hidden md:grid' />
+         </Carousel>
+        </div>
+        <div className='flex flex-col  md:justify-center'>
+         <div>
+          {project.stack.map((tech, i) => (
+           <Badge key={i} variant='secondary' className='mr-2 mb-5'>
+            {tech}
+           </Badge>
+          ))}
+         </div>
+         <div className=' text-justify'>{project.seeMore}</div>
+        </div>
+       </div>
+      </DrawerContent>
      </Drawer>
     ))}
    </div>

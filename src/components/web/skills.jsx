@@ -20,6 +20,7 @@ import zod from '../../assets/logo/zod.png';
 import aos from '../../assets/logo/aos.png';
 import reactbits from '../../assets/logo/reactbits.png';
 import motion from '../../assets/logo/framer-motion.png';
+import aceternity from '../../assets/logo/aceternity.png';
 
 //back-end images
 import nodejs from '../../assets/logo/nodejs.png';
@@ -52,6 +53,7 @@ const frontendLogo = [
  { src: zod, alt: 'ZOD', title: 'ZOD' },
  { src: reactbits, alt: 'React Bits', title: 'React Bits' },
  { src: motion, alt: 'Framer Motion', title: 'Framer Motion' },
+ { src: aceternity, alt: 'Aceternity UI', title: 'Aceternity UI' },
 ];
 
 const backendLogo = [
@@ -77,13 +79,18 @@ const toolLogo = [
 const Skills = ({ id }) => {
  return (
   <div id={id} className='p-5 bg-green-50'>
-   <h1>Skills</h1>
+   <h1
+    className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
+    data-aos='fade-up'
+   >
+    Skills
+   </h1>
    {/* front-end */}
-   <div>
-    <h2>Frontend Skills</h2>
+   <div className='mb-10'>
+    <h2 className='text-xl font-poppins font-medium'>Frontend Skills</h2>
     <LogoLoop
      logos={frontendLogo}
-     speed={70}
+     speed={60}
      direction='left'
      logoHeight={60}
      gap={60}
@@ -112,11 +119,11 @@ const Skills = ({ id }) => {
     />
    </div>
    {/* back-end */}
-   <div>
-    <h2>Backend Skills</h2>
+   <div className='mb-10'>
+    <h2 className='text-xl font-poppins font-medium'>Backend Skills</h2>
     <LogoLoop
      logos={backendLogo}
-     speed={70}
+     speed={60}
      direction='right'
      logoHeight={60}
      gap={60}
@@ -145,12 +152,12 @@ const Skills = ({ id }) => {
     />
    </div>
    {/* tools */}
-   <div>
-    <h2>Tools</h2>
+   <div className='mb-10'>
+    <h2 className='text-xl font-poppins font-medium'>Tools</h2>
     <LogoLoop
      logos={toolLogo}
-     speed={100}
-     direction='right'
+     speed={60}
+     direction='left'
      logoHeight={60}
      gap={60}
      hoverSpeed={0}
