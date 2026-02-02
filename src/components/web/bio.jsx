@@ -9,7 +9,6 @@ import { FolderOpen } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
 import { useRef } from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const images = [
  {
@@ -29,7 +28,8 @@ const images = [
 const data = [
  {
   title: '',
-  description:'I am a Software Engineering graduate with hands-on experience in software development, system support, IT operations, and business application development. I hold a BSc (Hons) in Software Engineering from Plymouth University (UK) with a Second Upper Class degree 🎓. I enjoy building practical, secure, and scalable systems that solve real business problems and improve operational efficiency 🚀.',
+  description:
+   'I am a Software Engineering graduate with hands-on experience in software development, system support, IT operations, and business application development. I hold a BSc (Hons) in Software Engineering from Plymouth University (UK) with a Second Upper Class degree 🎓. I enjoy building practical, secure, and scalable systems that solve real business problems and improve operational efficiency 🚀.',
   content: (
    <div className='flex justify-center '>
     <img
@@ -42,8 +42,9 @@ const data = [
  },
  {
   title: '',
-  description:'I began my professional journey at Nature’s Beauty Creations (NBC) as a Sales System Support & Testing Intern, where I worked on software testing, bug identification, system validation, and user support for internal sales systems. During this period, I was promoted to Junior Executive – Sales System Support, gaining experience in system monitoring, issue resolution, and cross-team collaboration 📊🔍.',
-    content: (
+  description:
+   'I began my professional journey at Nature’s Beauty Creations (NBC) as a Sales System Support & Testing Intern, where I worked on software testing, bug identification, system validation, and user support for internal sales systems. During this period, I was promoted to Junior Executive – Sales System Support, gaining experience in system monitoring, issue resolution, and cross-team collaboration 📊🔍.',
+  content: (
    <div>
     <img src={ME2} alt='My Self' className='w-full h-auto rounded-lg' />
    </div>
@@ -51,7 +52,8 @@ const data = [
  },
  {
   title: '',
-  description:'Currently, I work as an IT Assistant at PE Mathew Company, contributing beyond traditional IT support by developing and maintaining internal business systems. My work includes designing and deploying secure centralized database systems, developing web-based employee management and HR automation systems with role-based access, and handling network troubleshooting, IT asset management, website maintenance, and digital platforms 🌐🛠️.',
+  description:
+   'Currently, I work as an IT Assistant at PE Mathew Company, contributing beyond traditional IT support by developing and maintaining internal business systems. My work includes designing and deploying secure centralized database systems, developing web-based employee management and HR automation systems with role-based access, and handling network troubleshooting, IT asset management, website maintenance, and digital platforms 🌐🛠️.',
   content: (
    <div>
     <img src={GYM} alt='My Self' className='w-full h-auto rounded-lg' />
@@ -60,14 +62,14 @@ const data = [
  },
  {
   title: '',
-  description: 'In addition to my industry experience, I hold Google Cloud certifications, including Google Cloud Fundamentals – Core Infrastructure and Generative AI certifications covering large language models (LLMs) and responsible AI practices ☁️🤖. Outside of work, I am passionate about motorsports (Formula 1 & NASCAR) 🏎️, enjoy watching movies—especially comic-based films 🎬, and value continuous learning, teamwork, and problem-solving 💡.',
+  description:
+   'In addition to my industry experience, I hold Google Cloud certifications, including Google Cloud Fundamentals – Core Infrastructure and Generative AI certifications covering large language models (LLMs) and responsible AI practices ☁️🤖. Outside of work, I am passionate about motorsports (Formula 1 & NASCAR) 🏎️, enjoy watching movies—especially comic-based films 🎬, and value continuous learning, teamwork, and problem-solving 💡.',
   content: (
    <div>
     <img src={GYM} alt='My Self' className='w-full h-auto rounded-lg' />
    </div>
   ),
  },
- 
 ];
 
 const Bio = ({ id, navigate }) => {

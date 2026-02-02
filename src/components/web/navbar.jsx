@@ -1,15 +1,9 @@
-import { User } from 'lucide-react';
-import { CodeXml } from 'lucide-react';
-import { NotebookTabs } from 'lucide-react';
-import { BriefcaseBusiness } from 'lucide-react';
-import { FolderOpen } from 'lucide-react';
 import React from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 import { HomeIcon } from '../ui/home';
 import { UserIcon } from '../ui/user';
 import { FoldersIcon } from '../ui/folders';
-import { FolderCodeIcon } from '../ui/folder-code';
 import { ChevronsLeftRightIcon } from '../ui/chevrons-left-right';
 import { LaptopMinimalCheckIcon } from '../ui/laptop-minimal-check';
 import { ConnectIcon } from '../ui/connect';

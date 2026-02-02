@@ -24,62 +24,118 @@ import {
  CarouselPrevious,
 } from '../ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import { ScrollArea } from '../ui/scroll-area';
+
 const projects = [
  {
   title: 'Smart Spend 💸',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, sequi recusandae sit maxime qui, labore culpa, ',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'SmartSpend is a full-stack, web-based personal finance and expenses management application designed to help users track income and expenses, manage multiple accounts, set monthly budgets, and gain actionable financial insights.',
+  seeMore1:
+   'SmartSpend is a full-stack, web-based personal finance and expenses management application designed to help users track income and expenses, manage multiple accounts, set monthly budgets, and gain actionable financial insights. The system goes beyond basic expense tracking by introducing automation, recurring transactions, smart budget alerts, and AI-powered financial reports, helping users develop better spending habits and make informed financial decisions 📊.',
+  seeMore2:
+   'The application is built with Next.js (App Router) and React, featuring secure authentication using Clerk, a type-safe backend powered by Prisma with a PostgreSQL (Supabase) database, and serverless background processing using Inngest. Key features include AI-based receipt scanning, recurring expense automation, budget alert emails, and monthly AI-generated financial reports using Google Gemini AI 🤖. SmartSpend also implements rate limiting and bot protection with Arcjet, responsive UI with Tailwind CSS and shadcn/ui, and rich data visualizations using Recharts, making it a secure, scalable, and production-ready financial management system ☁️.',
   github: 'https://github.com/Upasara/Smart-Spend.git',
   link: 'https://smart-spend-delta-opal.vercel.app/',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'Next.js',
+   'Tailwind CSS',
+   'Shadcn UI',
+   'Prisma',
+   'Clerk',
+   'Inngest',
+   'Gemini API',
+   'Arcjet',
+   'Recharts',
+  ],
  },
  {
   title: 'EMSys 👩🏻‍💻',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'EMSys is a full-stack, web-based HR and Employee Management System built to digitize and centralize employee records, departments, salaries, and leave operations, replacing manual and spreadsheet-based workflows.',
+  seeMore1:
+   'EMSys is a full-stack, web-based Employee Management and HR system developed to digitize and streamline employee administration processes. It replaces manual and spreadsheet-based workflows with a secure, centralized platform for managing employee records, departments, salaries, and leave operations. The system supports role-based access for administrators and employees, providing transparency, efficiency, and improved decision-making through real-time dashboards and summaries 📊.',
+  seeMore2:
+   'Built using React (Vite) on the frontend and Node.js, Express, and MongoDB Atlas on the backend, EMSys focuses on security, scalability, and responsive design. Key features include employee and department management, leave handling, salary management with Excel export, and JWT-based authentication. The application is currently deployed on Vercel for demonstration purposes and is designed for easy migration to paid hosting for production use ☁️.',
   github: 'https://github.com/Upasara/EMSys.git',
   link: 'https://pemco-emsys.vercel.app/',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'React',
+   'Tailwind CSS',
+   'Node.js',
+   'Express.js',
+   'MongoDB Atlas',
+   'JWT',
+   'Axios',
+   'Recharts',
+   'XLSX',
+  ],
  },
  {
   title: 'Weather Snap 🌤️',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'WeatherSnap is a responsive, web-based weather forecasting application that provides real-time weather information based on city search or user’s current location.',
+  seeMore1:
+   'WeatherSnap is a responsive, web-based weather forecasting application that provides real-time weather information based on city search or user’s current location. The application displays current weather conditions, hourly forecasts, and a 5-day forecast, along with detailed highlights such as humidity, pressure, wind speed, visibility, “feels like” temperature, sunrise and sunset times, offering users a clear and complete view of weather conditions ☀️🌧️.',
+  seeMore2:
+   'The application is built using HTML, CSS, JavaScript, and Tailwind CSS, and integrates the OpenWeatherMap API for live weather, forecast, geolocation, and air quality data. It features dynamic UI updates, API-driven data rendering, geolocation-based weather detection, and animated user interactions using AOS. WeatherSnap focuses on clean UI design, efficient API handling, and real-time data visualization, making it a practical and user-friendly weather application 🌍.',
   github: 'https://github.com/Upasara/Weather-App.git',
   link: 'https://weather-app-rouge-ten-35.vercel.app/',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'HTML',
+   'Tailwind CSS',
+   'CSS',
+   'Java Script',
+   'OpenWeatherMap API',
+   'AOS',
+  ],
  },
  {
   title: 'TeFMaSys 🍃',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'TEFMASYS is a dual-platform tea farmer management system designed to improve communication and transparency between tea farmers and tea factory management in Sri Lanka.',
+  seeMore1:
+   'TEFMASYS is a dual-platform tea farmer management system consisting of a mobile application for farmers and a web-based admin panel for tea factory managers. The system was designed to improve communication, transparency, and efficiency in the tea collection process by digitizing farmer data, earnings, pricing updates, and operational messages across the tea supply chain in Sri Lanka.',
+  seeMore2:
+   'The mobile application, built with Flutter, allows farmers to view weekly tea leaf collections, pricing updates, total earnings, and historical performance charts directly from their smartphones 📱. It also includes real-time notifications, graph-based insights, and a chatbot interface to assist farmers with quick queries, ensuring timely access to important information and reducing dependency on manual communication.',
+  seeMore3:
+   'The web application, developed using React and TypeScript, serves as an admin dashboard for tea factory managers. It enables administrators to manage farmer records, handle complaints, and publish announcements and updates efficiently. Both platforms are powered by Firebase, providing authentication, real-time database synchronization, cloud storage, and push notifications, resulting in a scalable, reliable, and production-ready system that modernizes a traditional industry 🌱.',
   github:
    'https://github.com/Upasara/Tea_Farmer_Management_System-Mobile_App.git',
   link: '',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'Flutter',
+   'Firebase Auth',
+   'Firestore',
+   'Firebase Messaging',
+   'React',
+   'TypeScript',
+  ],
  },
  {
   title: 'Smart Irrigation System 🌊',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'The Smart Irrigation System is an IoT-enabled agriculture solution designed to improve water efficiency and support optimal crop growth through real-time environmental monitoring.',
   seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'The Smart Irrigation System is an IoT-enabled agriculture solution designed to improve water efficiency and support optimal crop growth through real-time environmental monitoring. The system uses sensors to measure soil moisture, temperature, humidity, and sunlight, with data collected and transmitted via an ESP8266 WiFi module to a Firebase Realtime Database. This enables continuous tracking of field conditions and helps reduce water wastage while maintaining healthy crop conditions 🌧️🌡️.',
+  seeMore2:
+   'A custom mobile application allows users to monitor live sensor readings and control irrigation remotely, providing greater flexibility and automation in farm management 📱. The system supports real-time data synchronization and remote actuator control through Firebase, demonstrating a practical application of IoT, cloud integration, and mobile development. This project highlights the use of technology in sustainable farming, combining embedded systems, cloud services, and mobile interfaces into a complete end-to-end solution ☁️🌾.',
   github: 'https://github.com/Upasara/Smart-Irrigation-System_IOT.git',
   link: '',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'Arduino',
+   'Kotlin',
+   'Firestore',
+   'ESP8266',
+   'DHT11',
+   'Soil Moisture',
+   'LDR',
+  ],
  },
  {
   title: 'Rathaya 🚗',
@@ -214,37 +270,40 @@ const Projects = ({ id }) => {
        </div>
       </DrawerTrigger>
       <DrawerContent>
-       <h2 className='text-center text-lg md:text-2xl pt-5  font-normal font-poppins tracking-wide text-shadow-2xs'>
-        {project.title}
-       </h2>
-       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 p-5 md:px-15 md:py-10'>
-        <div className='shadow-md'>
-         <Carousel>
-          <CarouselContent>
-           {project.image.map((image, i) => (
-            <CarouselItem key={i}>
-             <img
-              src={image}
-              className='rounded-md h-52 md:h-80 w-full object-cover shadow-md'
-             />
-            </CarouselItem>
-           ))}
-          </CarouselContent>
-          <CarouselPrevious className='hidden md:grid' />
-          <CarouselNext className='hidden md:grid' />
-         </Carousel>
-        </div>
-        <div className='flex flex-col  md:justify-center'>
-         <div>
-          {project.stack.map((tech, i) => (
-           <Badge key={i} variant='secondary' className='mr-2 mb-5'>
-            {tech}
-           </Badge>
-          ))}
+       <ScrollArea className='h-[85vh]'>
+        <h2 className='text-center text-lg md:text-2xl pt-5  font-normal font-poppins tracking-wide text-shadow-2xs'>
+         {project.title}
+        </h2>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 p-5 md:px-15 md:py-10'>
+         <div className='shadow-md h-52 md:h-80 w-full'>
+          <Carousel>
+           <CarouselContent>
+            {project.image.map((image, i) => (
+             <CarouselItem key={i}>
+              <img
+               src={image}
+               className='rounded-md h-52 md:h-80 w-full object-cover shadow-md'
+              />
+             </CarouselItem>
+            ))}
+           </CarouselContent>
+           <CarouselPrevious className='hidden md:grid' />
+           <CarouselNext className='hidden md:grid' />
+          </Carousel>
          </div>
-         <div className=' text-justify'>{project.seeMore}</div>
+         <div className='flex flex-col  md:justify-center'>
+          <div>
+           {project.stack.map((tech, i) => (
+            <Badge key={i} variant='secondary' className='mr-2 mb-5'>
+             {tech}
+            </Badge>
+           ))}
+          </div>
+          <div className=' text-justify '>{project.seeMore1}</div>
+          <div className=' text-justify mt-5'>{project.seeMore2}</div>
+         </div>
         </div>
-       </div>
+       </ScrollArea>
       </DrawerContent>
      </Drawer>
     ))}

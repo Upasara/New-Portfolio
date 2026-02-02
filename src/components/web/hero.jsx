@@ -1,18 +1,14 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import programmer from '../../assets/programmer1.png';
-import { ArrowDownToLine } from 'lucide-react';
 import GradientIcon from './gradient-icon';
 import { Linkedin } from 'lucide-react';
 import { Github } from 'lucide-react';
 import { Instagram } from 'lucide-react';
-import { FolderOpen } from 'lucide-react';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { FlipWords } from '../ui/flip-words';
 import { CardBody, CardContainer } from '../ui/3d-card';
-import { FolderClosed } from 'lucide-react';
 import { LinkPreview } from '../ui/link-preview';
-import { HardDriveDownloadIcon } from '../ui/hard-drive-download';
 import { DownloadIcon } from '../ui/download';
 import { useRef } from 'react';
 import { FoldersIcon } from '../ui/folders';
