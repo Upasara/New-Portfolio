@@ -121,7 +121,7 @@ const projects = [
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
    'The Smart Irrigation System is an IoT-enabled agriculture solution designed to improve water efficiency and support optimal crop growth through real-time environmental monitoring.',
-  seeMore:
+  seeMore1:
    'The Smart Irrigation System is an IoT-enabled agriculture solution designed to improve water efficiency and support optimal crop growth through real-time environmental monitoring. The system uses sensors to measure soil moisture, temperature, humidity, and sunlight, with data collected and transmitted via an ESP8266 WiFi module to a Firebase Realtime Database. This enables continuous tracking of field conditions and helps reduce water wastage while maintaining healthy crop conditions 🌧️🌡️.',
   seeMore2:
    'A custom mobile application allows users to monitor live sensor readings and control irrigation remotely, providing greater flexibility and automation in farm management 📱. The system supports real-time data synchronization and remote actuator control through Firebase, demonstrating a practical application of IoT, cloud integration, and mobile development. This project highlights the use of technology in sustainable farming, combining embedded systems, cloud services, and mobile interfaces into a complete end-to-end solution ☁️🌾.',
@@ -141,12 +141,14 @@ const projects = [
   title: 'Rathaya 🚗',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'Rathaya is a full-stack, web-based auto parts ordering platform designed to simplify how customers discover, verify, and purchase vehicle spare parts from a trusted auto shop.',
+  seeMore1:
+   'Rathaya is a full-stack, web-based auto parts ordering platform designed to simplify how customers discover, verify, and purchase vehicle spare parts from a trusted auto shop. The user-facing application allows customers to register, search for required parts, place orders, and communicate with the shop in real time through an integrated chat system 📲. The platform also supports post-delivery payment, ensuring trust and customer satisfaction while providing a smooth and reliable online shopping experience 🌐.',
+  seeMore2:
+   'The system includes a dedicated admin panel built for auto shop owners to efficiently manage inventory, update part details, track orders, and monitor stock levels 📦. The backend is developed using Node.js, Express, and MongoDB, with Socket.IO enabling real-time communication between users and administrators. Rathaya demonstrates practical full-stack development skills by combining secure APIs, real-time features, and structured data management to streamline business operations and improve customer engagement 🖥️.',
   github: 'https://github.com/Upasara/Rathaya.git',
   link: '',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: ['Angular.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'JWT'],
  },
  {
   title: 'PEMcore 🖥️',

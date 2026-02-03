@@ -12,6 +12,9 @@ import { LinkPreview } from '../ui/link-preview';
 import { DownloadIcon } from '../ui/download';
 import { useRef } from 'react';
 import { FoldersIcon } from '../ui/folders';
+import { GithubIcon } from '../ui/github';
+import { LinkedinIcon } from '../ui/linkedin';
+import { InstagramIcon } from '../ui/instagram';
 
 const flipWords = [
  'Software Engineer',
@@ -104,17 +107,17 @@ const Hero = ({ id }) => {
      <div className='flex gap-4' data-aos='fade-right' data-aos-delay='1200'>
       <LinkPreview url='https://github.com/Upasara'>
        <button className='bg-transparent cursor-pointer'>
-        <GradientIcon Icon={Github} />
+        <GithubIcon className='text-purple-600' />
        </button>
       </LinkPreview>
       <LinkPreview url='https://www.linkedin.com/in/mihiranga-upasara/'>
        <button className='bg-transparent cursor-pointer'>
-        <GradientIcon Icon={Linkedin} />
+        <LinkedinIcon className='text-purple-600' />
        </button>
       </LinkPreview>
       <LinkPreview url='https://www.instagram.com/mihiranga.upasara/'>
        <button className='bg-transparent cursor-pointer'>
-        <GradientIcon Icon={Instagram} />
+        <InstagramIcon className='text-purple-600' />
        </button>
       </LinkPreview>
      </div>
