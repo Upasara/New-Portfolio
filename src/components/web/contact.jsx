@@ -30,31 +30,31 @@ const Contact = ({ id }) => {
      Contact Me
     </h1>
     <div
-     className='flex mb-3 text-lg flex-col items-center'
+     className='flex mb-7 text-lg flex-col items-center'
      onMouseEnter={() => iconRef1.current.startAnimation()}
      onMouseLeave={() => iconRef1.current.stopAnimation()}
     >
      <h3 className='font-mono text-xl font-semibold tracking-wide'>Email</h3>
 
-     <p className='flex gap-1 items-center text-base'>
+     <p className='flex gap-2 items-center text-base'>
       <AtSignIcon ref={iconRef1} size={18} />
       mihirangaupasara2000@gmail.com
      </p>
     </div>
     <div
-     className='flex  mb-3 text-lg flex-col items-center'
+     className='flex  mb-7 text-lg flex-col items-center'
      onMouseEnter={() => iconRef2.current.startAnimation()}
      onMouseLeave={() => iconRef2.current.stopAnimation()}
     >
      <h3 className='font-mono text-xl font-semibold tracking-wide'>Phone</h3>
-     <p className='flex gap-1 items-center text-base'>
+     <p className='flex gap-2 items-center text-base'>
       <VibrateIcon ref={iconRef2} size={20} />
       071 5641 280
      </p>
     </div>
     {/* socials */}
     <div className='flex flex-col items-center'>
-     <h3 className='font-mono text-xl font-semibold tracking-wide'>Social</h3>
+     <h3 className='font-mono text-xl font-semibold tracking-wide mb-2'>Social</h3>
      <div className='flex gap-4'>
       <LinkPreview url='https://github.com/Upasara'>
        <button className='bg-transparent cursor-pointer'>
@@ -75,26 +75,26 @@ const Contact = ({ id }) => {
     </div>
    </div>
    {/* form */}
-   <div>
+   <div className='px-0 md:px-15'>
     <form>
      <FieldGroup>
       <FieldSet>
        <FieldGroup>
         <Field>
-         <FieldLabel htmlFor='name'>Name</FieldLabel>
-         <Input id='name' placeholder='John Doe' />
+         <FieldLabel htmlFor='name' className='font-mono text-lg font-medium'>Name</FieldLabel>
+         <Input id='name' placeholder='John Doe'  className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md'/>
         </Field>
         <Field>
          <FieldLabel htmlFor='email'>E-mail</FieldLabel>
-         <Input id='email' placeholder='johndoe@gmail.com' />
+         <Input id='email' placeholder='johndoe@gmail.com' className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md' />
         </Field>
         <Field>
          <FieldLabel htmlFor='message'>Message</FieldLabel>
-         <Input id='message' />
+         <Input id='message' className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md' />
         </Field>
         <Field>
-         <Button type='submit'>
-          <Send />
+         <Button type='submit' className='bg-gradient shadow-md hover:shadow-lg group hover:scale-105 duration-300 hover:text-base '>
+          <Send className='group-hover:scale-110 duration-300' />
           Send
          </Button>
         </Field>
