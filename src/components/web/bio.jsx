@@ -75,10 +75,7 @@ const data = [
 const Bio = ({ id, navigate }) => {
  const iconRef = useRef(null);
  return (
-  <section
-   id={id}
-   className='min-h-screen bg-secondary-bg p-5 md:p-10 pt-10 pb-15'
-  >
+  <section id={id} className='min-h-screen  p-5 md:p-10 pt-10 pb-15'>
    <h1
     className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5'
     data-aos='fade-up'
@@ -86,7 +83,7 @@ const Bio = ({ id, navigate }) => {
     Get To Know Me
    </h1>
 
-   <div className=''>
+   <div className='bg-white rounded-md'>
     <div
      className='lg:hidden flex items-center justify-center w-full md:w-130 h-64 md:h-80 mx-auto mb-10 px-10 mt-10'
      data-aos='fade-up'

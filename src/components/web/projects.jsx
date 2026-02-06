@@ -154,12 +154,20 @@ const projects = [
   title: 'PEMcore 🖥️',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
-  seeMore:
-   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto corrupti beatae voluptas error vel, maiores fuga? Fuga totam sequi recusandae sit maxime qui, labore culpa, nam omnis provident quae in?',
+   'Designed and implemented a secure centralized data storage system to replace fragmented, department-level file handling at P. E. Mathew & Company.',
+  seeMore1:
+   'Designed and implemented a secure centralized data storage system to replace fragmented, department-level file handling at P. E. Mathew & Company. The solution consolidated all organizational data into a single, well-structured storage environment, improving accessibility, consistency, and operational efficiency 📂⚙️. Department-wise folder segregation, controlled access permissions, and a structured backup strategy ensured smooth day-to-day operations while reducing human error and data duplication.',
+  seeMore2:
+   'To enhance security and reliability, the system was configured with multiple protection layers including BitLocker drive encryption 🔐, firewall hardening, antivirus management, secure boot options, and a 3-2-1 backup strategy for disaster recovery 💾. A custom Python-based firewall automation script was implemented to block known malicious IPs, strengthening network protection 🚫🌐. This project reflects a practical, real-world implementation of data security, system administration, and IT infrastructure best practices, ensuring long-term scalability, data protection, and business continuity for the firm.',
   github: 'https://github.com/Upasara/PEMcore.git',
   link: '',
-  stack: ['Next.js', 'Tailwind CSS', 'Shadcn UI'],
+  stack: [
+   'Python',
+   'Windows',
+   'Network Architectures',
+   'Windows Firewall',
+   'Firewall Automation',
+  ],
  },
 ];
 
