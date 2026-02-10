@@ -6,6 +6,7 @@ import pemco from '../../assets/comapany_logo/pemco.png';
 import nbc from '../../assets/comapany_logo/nbc.png';
 import ply from '../../assets/comapany_logo/ply.png';
 import ritti from '../../assets/comapany_logo/ritti.png';
+import google from '../../assets/comapany_logo/google-cloud.png';
 
 const experiences = [
  {
@@ -168,7 +169,7 @@ const Experience = ({ id }) => {
    ),
   },
   {
-   title: 'IT Assistant',
+   title: 'SLCCLC',
    content: (
     <div className='flex flex-col gap-4'>
      {/* header */}
@@ -190,8 +191,76 @@ const Experience = ({ id }) => {
      {/* description */}
      <div>
       <p>
-       Tested and validated a new internal sales system, identified bugs, and
-       collaborated with the sales team to improve system reliability.
+       Completed foundational computer training covering MS Office applications,
+       internet and email usage, and basic computer hardware concepts, building
+       essential digital and IT skills that supported further studies and
+       professional work in software and IT systems.
+      </p>
+     </div>
+    </div>
+   ),
+  },
+  {
+   title: 'Core Infrastructure',
+   content: (
+    <div className='flex flex-col gap-4'>
+     {/* header */}
+     <div className='flex flex-row gap-3'>
+      {/* logo */}
+      <div>
+       <img
+        src={google}
+        alt='Google Cloud Fundamentals'
+        className='h-10 w-auto'
+       />
+      </div>
+      {/* name */}
+      <div>
+       <h3>Google Cloud Fundamentals</h3>
+       <p>May 2024</p>
+      </div>
+     </div>
+     {/* description */}
+     <div>
+      <p>
+       Completed training focused on understanding the core services and
+       infrastructure of Google Cloud Platform (GCP). Gained hands-on knowledge
+       of cloud resource organization, identity and access concepts, basic
+       infrastructure setup, and cloud storage options, building a strong
+       foundation in cloud-based application and system deployment.
+      </p>
+     </div>
+    </div>
+   ),
+  },
+  {
+   title: 'Intro to Generative AI',
+   content: (
+    <div className='flex flex-col gap-4'>
+     {/* header */}
+     <div className='flex flex-row gap-3'>
+      {/* logo */}
+      <div>
+       <img
+        src={google}
+        alt='Google Cloud Fundamentals'
+        className='h-10 w-auto'
+       />
+      </div>
+      {/* name */}
+      <div>
+       <h3>Google Cloud Fundamentals</h3>
+       <p>May 2024</p>
+      </div>
+     </div>
+     {/* description */}
+     <div>
+      <p>
+       Completed a specialization covering core Generative AI concepts,
+       including Large Language Models (LLMs) and Responsible AI practices.
+       Gained a practical understanding of how generative models work, key AI
+       use cases, and how to apply ethical and responsible AI principles using
+       Google Cloud technologies.
       </p>
      </div>
     </div>
@@ -199,7 +268,13 @@ const Experience = ({ id }) => {
   },
  ];
  return (
-  <section id={id} className='relative mx-auto max-w-5xl py-20 p'>
+  <section id={id} className='relative mx-auto max-w-6xl py-20 overflow-clip'>
+   <h1
+    className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
+    data-aos='fade-up'
+   >
+    Experience & Education
+   </h1>
    <Timeline data={data} />
   </section>
  );

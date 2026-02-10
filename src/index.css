@@ -12,10 +12,22 @@
  --font-manrope: 'Manrope', sans-serif;
  --font-inter: 'Inter', sans-serif;
 
- --color-primary-bg: #fafafa;
+ --color-primary-bg: #f5f5f5;
  --color-secondary-bg: #f1f5f9;
  --color-primary-text: #1f2937;
  --color-secondary-text: #4b5563;
+
+ --color-indigoo-50: #f1e7fe;
+ --color-indigoo-100: #e3cefd;
+ --color-indigoo-200: #c79dfb;
+ --color-indigoo-300: #ab6cf9;
+ --color-indigoo-400: #903bf7;
+ --color-indigoo-500: #740af5;
+ --color-indigoo-600: #5d08c4;
+ --color-indigoo-700: #450693;
+ --color-indigoo-800: #2e0462;
+ --color-indigoo-900: #170231;
+ --color-indigoo-950: #100122;
 }
 
 @layer utilities {

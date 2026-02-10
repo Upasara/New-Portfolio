@@ -19,11 +19,11 @@ import { GithubIcon } from '../ui/github';
 import {
  Carousel,
  CarouselContent,
+ CarouselDots,
  CarouselItem,
  CarouselNext,
  CarouselPrevious,
 } from '../ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 import { ScrollArea } from '../ui/scroll-area';
 
 const projects = [
@@ -177,7 +177,7 @@ const Projects = ({ id }) => {
  return (
   <section id={id} className='min-h-screen p-5 md:p-10 lg:px-20 '>
    <h1
-    className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
+    className='text-center text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
     data-aos='fade-up'
    >
     Projects
@@ -192,10 +192,7 @@ const Projects = ({ id }) => {
          className='p-0 hover:scale-105 transition-transform duration-300 hover:shadow-lg cursor-pointer'
         >
          <CardHeader className='p-2.5 pb-0'>
-          <Carousel
-           plugins={[Autoplay({ delay: 3000 })]}
-           className='shadow-md rounded-md w-full h-64  bg-transparent'
-          >
+          <Carousel className='shadow-md rounded-md w-full h-64  bg-transparent'>
            <CarouselContent>
             {project.image.map((img, i) => (
              <CarouselItem key={i}>
@@ -207,10 +204,11 @@ const Projects = ({ id }) => {
              </CarouselItem>
             ))}
            </CarouselContent>
+           <CarouselDots />
           </Carousel>
          </CardHeader>
          <CardContent className='px-5 pb-5 -mt-2'>
-          <CardTitle className='pb-2 font-normal font-poppins tracking-wide text-shadow-2xs text-lg'>
+          <CardTitle className='pb-2 font-medium text-indigoo-900 font-poppins tracking-wide text-shadow-2xs text-lg '>
            {project.title}
           </CardTitle>
           <CardDescription>
@@ -218,7 +216,11 @@ const Projects = ({ id }) => {
             {/* Tech Stack */}
             <div className='flex flex-wrap gap-1.5 pb-2'>
              {project.stack.map((tech, i) => (
-              <Badge key={i} variant='secondary'>
+              <Badge
+               key={i}
+               variant='secondary'
+               className='bg-indigoo-50 text-indigoo-600'
+              >
                {tech}
               </Badge>
              ))}
@@ -236,10 +238,7 @@ const Projects = ({ id }) => {
               variant='outline'
               size='sm'
               onClick={(e) => e.stopPropagation()}
-              className='relative overflow-hidden border-2 border-purple-600 text-purple-600 shadow-sm hover:shadow-lg  transition-all 
-           duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 
-           before:w-0 before:rounded-sm before:bg-gradient-to-r before:from-fuchsia-600 before:via-purple-600 before:to-violet-600 before:duration-300 before:ease-out hover:text-white 
-            hover:before:h-40 hover:before:w-40 hover:before:opacity-80'
+              className=' bg-indigoo-600 text-white/90 border-0 shadow-sm hover:text-white hover:bg-indigoo-700 hover:shadow-md hover:scale-110 duration-300'
               onMouseEnter={() => iconRef2.current[i]?.startAnimation()}
               onMouseLeave={() => iconRef2.current[i]?.stopAnimation()}
              >
@@ -257,10 +256,7 @@ const Projects = ({ id }) => {
               asChild
               size='sm'
               onClick={(e) => e.stopPropagation()}
-              className=' relative overflow-hidden border-2 border-purple-600 text-purple-600 shadow-sm transition-all 
-           duration-500 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 
-           before:w-0 before:rounded-sm before:bg-gradient-to-r before:from-fuchsia-600 before:via-purple-600 before:to-violet-600 
-           before:duration-500 before:ease-out hover:text-white hover:shadow-lg hover:before:h-40 hover:before:w-40 hover:before:opacity-80 '
+              className='bg-indigoo-600 text-white/90 border-0 shadow-sm hover:text-white hover:bg-indigoo-700 hover:shadow-md hover:scale-110 duration-300'
               onMouseEnter={() => iconRef.current[i]?.startAnimation()}
               onMouseLeave={() => iconRef.current[i]?.stopAnimation()}
              >

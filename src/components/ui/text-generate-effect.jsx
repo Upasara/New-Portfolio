@@ -32,7 +32,7 @@ export const TextGenerateEffect = ({
      return (
       <motion.span
        key={word + idx}
-       className='dark:text-white text-black opacity-0 text-gradient font-poppins font-semibold'
+       className='dark:text-white opacity-0 text-indigoo-600 font-poppins font-semibold'
        style={{
         filter: filter ? 'blur(10px)' : 'none',
        }}
@@ -48,7 +48,7 @@ export const TextGenerateEffect = ({
  return (
   <div className={cn('font-bold', className)}>
    <div className=''>
-    <div className=' dark:text-white text-black text-3xl md:text-5xl  lg:text-6xl text-gradient '>
+    <div className=' dark:text-white text-indigoo-600 text-3xl md:text-5xl  lg:text-6xl '>
      {renderWords()}
     </div>
    </div>

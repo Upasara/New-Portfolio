@@ -78,16 +78,18 @@ const toolLogo = [
 
 const Skills = ({ id }) => {
  return (
-  <div id={id} className='p-5 bg-green-50'>
+  <section id={id} className='p-5 bg-white'>
    <h1
-    className='text-center text-gradient font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
+    className='text-center text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
     data-aos='fade-up'
    >
     Skills
    </h1>
    {/* front-end */}
-   <div className='mb-10'>
-    <h2 className='text-xl font-poppins font-medium'>Frontend Skills</h2>
+   <div className='mb-10' data-aos='fade-up' data-aos-delay='200'>
+    <h2 className='text-xl font-poppins font-medium mb-3 text-indigoo-800 '>
+     Frontend Skills
+    </h2>
     <LogoLoop
      logos={frontendLogo}
      speed={60}
@@ -119,8 +121,10 @@ const Skills = ({ id }) => {
     />
    </div>
    {/* back-end */}
-   <div className='mb-10'>
-    <h2 className='text-xl font-poppins font-medium'>Backend Skills</h2>
+   <div className='mb-10' data-aos='fade-up' data-a os-delay='400'>
+    <h2 className='text-xl font-poppins font-medium mb-3 text-indigoo-800 '>
+     Backend Skills
+    </h2>
     <LogoLoop
      logos={backendLogo}
      speed={60}
@@ -152,8 +156,10 @@ const Skills = ({ id }) => {
     />
    </div>
    {/* tools */}
-   <div className='mb-10'>
-    <h2 className='text-xl font-poppins font-medium'>Tools</h2>
+   <div className='mb-10' data-aos='fade-up' data-aos-delay='600'>
+    <h2 className='text-xl font-poppins font-medium mb-3 text-indigoo-800'>
+     Tools
+    </h2>
     <LogoLoop
      logos={toolLogo}
      speed={60}
@@ -184,7 +190,7 @@ const Skills = ({ id }) => {
      )}
     />
    </div>
-  </div>
+  </section>
  );
 };
 
