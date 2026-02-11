@@ -13,7 +13,6 @@ import WeatherSnap from '../../assets/projects/weather-snap.png';
 import { Button } from '../ui/button';
 import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
 import { Badge } from '../ui/badge';
-import { LinkIcon } from '../ui/link';
 import { useRef } from 'react';
 import { GithubIcon } from '../ui/github';
 import {
@@ -25,20 +24,22 @@ import {
  CarouselPrevious,
 } from '../ui/carousel';
 import { ScrollArea } from '../ui/scroll-area';
+import { ArrowUpRightIcon } from '../ui/arrow-up-right';
 
 const projects = [
  {
   title: 'Smart Spend 💸',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'SmartSpend is a full-stack, web-based personal finance and expenses management application designed to help users track income and expenses, manage multiple accounts, set monthly budgets, and gain actionable financial insights.',
+   'SmartSpend is a full-stack web application that helps users track income and expenses, manage multiple accounts, set budgets, and gain actionable financial insights.',
   seeMore1:
    'SmartSpend is a full-stack, web-based personal finance and expenses management application designed to help users track income and expenses, manage multiple accounts, set monthly budgets, and gain actionable financial insights. The system goes beyond basic expense tracking by introducing automation, recurring transactions, smart budget alerts, and AI-powered financial reports, helping users develop better spending habits and make informed financial decisions 📊.',
   seeMore2:
    'The application is built with Next.js (App Router) and React, featuring secure authentication using Clerk, a type-safe backend powered by Prisma with a PostgreSQL (Supabase) database, and serverless background processing using Inngest. Key features include AI-based receipt scanning, recurring expense automation, budget alert emails, and monthly AI-generated financial reports using Google Gemini AI 🤖. SmartSpend also implements rate limiting and bot protection with Arcjet, responsive UI with Tailwind CSS and shadcn/ui, and rich data visualizations using Recharts, making it a secure, scalable, and production-ready financial management system ☁️.',
   github: 'https://github.com/Upasara/Smart-Spend.git',
   link: 'https://smart-spend-delta-opal.vercel.app/',
-  stack: [
+  stack1: ['Next.js', 'Prisma', 'Gemini API'],
+  stack2: [
    'Next.js',
    'Tailwind CSS',
    'Shadcn UI',
@@ -54,19 +55,20 @@ const projects = [
   title: 'EMSys 👩🏻‍💻',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'EMSys is a full-stack, web-based HR and Employee Management System built to digitize and centralize employee records, departments, salaries, and leave operations, replacing manual and spreadsheet-based workflows.',
+   'EMSys is a full-stack web-based HR system that centralizes employee records, departments, salaries, and leave management, replacing manual and spreadsheet-based workflows.',
   seeMore1:
    'EMSys is a full-stack, web-based Employee Management and HR system developed to digitize and streamline employee administration processes. It replaces manual and spreadsheet-based workflows with a secure, centralized platform for managing employee records, departments, salaries, and leave operations. The system supports role-based access for administrators and employees, providing transparency, efficiency, and improved decision-making through real-time dashboards and summaries 📊.',
   seeMore2:
    'Built using React (Vite) on the frontend and Node.js, Express, and MongoDB Atlas on the backend, EMSys focuses on security, scalability, and responsive design. Key features include employee and department management, leave handling, salary management with Excel export, and JWT-based authentication. The application is currently deployed on Vercel for demonstration purposes and is designed for easy migration to paid hosting for production use ☁️.',
   github: 'https://github.com/Upasara/EMSys.git',
   link: 'https://pemco-emsys.vercel.app/',
-  stack: [
+  stack1: ['React', 'MongoDB', 'Node.js'],
+  stack2: [
    'React',
    'Tailwind CSS',
    'Node.js',
    'Express.js',
-   'MongoDB Atlas',
+   'MongoDB',
    'JWT',
    'Axios',
    'Recharts',
@@ -84,7 +86,8 @@ const projects = [
    'The application is built using HTML, CSS, JavaScript, and Tailwind CSS, and integrates the OpenWeatherMap API for live weather, forecast, geolocation, and air quality data. It features dynamic UI updates, API-driven data rendering, geolocation-based weather detection, and animated user interactions using AOS. WeatherSnap focuses on clean UI design, efficient API handling, and real-time data visualization, making it a practical and user-friendly weather application 🌍.',
   github: 'https://github.com/Upasara/Weather-App.git',
   link: 'https://weather-app-rouge-ten-35.vercel.app/',
-  stack: [
+  stack1: ['HTML', 'Java Script', 'OpenWeatherMap API'],
+  stack2: [
    'HTML',
    'Tailwind CSS',
    'CSS',
@@ -97,7 +100,7 @@ const projects = [
   title: 'TeFMaSys 🍃',
   image: [SmartSpend, Emsys, WeatherSnap],
   description:
-   'TEFMASYS is a dual-platform tea farmer management system designed to improve communication and transparency between tea farmers and tea factory management in Sri Lanka.',
+   'TEFMASYS is a dual-platform tea farmer management system that improves communication and transparency between farmers and tea factory management in Sri Lanka.',
   seeMore1:
    'TEFMASYS is a dual-platform tea farmer management system consisting of a mobile application for farmers and a web-based admin panel for tea factory managers. The system was designed to improve communication, transparency, and efficiency in the tea collection process by digitizing farmer data, earnings, pricing updates, and operational messages across the tea supply chain in Sri Lanka.',
   seeMore2:
@@ -107,7 +110,8 @@ const projects = [
   github:
    'https://github.com/Upasara/Tea_Farmer_Management_System-Mobile_App.git',
   link: '',
-  stack: [
+  stack1: ['Flutter', 'Firestore', 'React'],
+  stack2: [
    'Flutter',
    'Firebase Auth',
    'Firestore',
@@ -127,7 +131,8 @@ const projects = [
    'A custom mobile application allows users to monitor live sensor readings and control irrigation remotely, providing greater flexibility and automation in farm management 📱. The system supports real-time data synchronization and remote actuator control through Firebase, demonstrating a practical application of IoT, cloud integration, and mobile development. This project highlights the use of technology in sustainable farming, combining embedded systems, cloud services, and mobile interfaces into a complete end-to-end solution ☁️🌾.',
   github: 'https://github.com/Upasara/Smart-Irrigation-System_IOT.git',
   link: '',
-  stack: [
+  stack1: ['Arduino', 'Kotlin', 'Firestore'],
+  stack2: [
    'Arduino',
    'Kotlin',
    'Firestore',
@@ -148,7 +153,15 @@ const projects = [
    'The system includes a dedicated admin panel built for auto shop owners to efficiently manage inventory, update part details, track orders, and monitor stock levels 📦. The backend is developed using Node.js, Express, and MongoDB, with Socket.IO enabling real-time communication between users and administrators. Rathaya demonstrates practical full-stack development skills by combining secure APIs, real-time features, and structured data management to streamline business operations and improve customer engagement 🖥️.',
   github: 'https://github.com/Upasara/Rathaya.git',
   link: '',
-  stack: ['Angular.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'JWT'],
+  stack1: ['Angular.js', 'Node.js', 'MongoDB'],
+  stack2: [
+   'Angular.js',
+   'Node.js',
+   'Express.js',
+   'MongoDB',
+   'Socket.IO',
+   'JWT',
+  ],
  },
  {
   title: 'PEMcore 🖥️',
@@ -161,7 +174,8 @@ const projects = [
    'To enhance security and reliability, the system was configured with multiple protection layers including BitLocker drive encryption 🔐, firewall hardening, antivirus management, secure boot options, and a 3-2-1 backup strategy for disaster recovery 💾. A custom Python-based firewall automation script was implemented to block known malicious IPs, strengthening network protection 🚫🌐. This project reflects a practical, real-world implementation of data security, system administration, and IT infrastructure best practices, ensuring long-term scalability, data protection, and business continuity for the firm.',
   github: 'https://github.com/Upasara/PEMcore.git',
   link: '',
-  stack: [
+  stack1: ['Python', 'Network Architectures', 'Windows Firewall'],
+  stack2: [
    'Python',
    'Windows',
    'Network Architectures',
@@ -189,10 +203,10 @@ const Projects = ({ id }) => {
        <div data-aos='fade-up' data-aos-delay={i * 100}>
         <Card
          key={i}
-         className='p-0 hover:scale-105 transition-transform duration-300 hover:shadow-lg cursor-pointer'
+         className='p-0 hover:scale-105 transition-all shadow-md  hover:shadow-lg cursor-pointer font-inter border-2 border-indigoo-100 hover:shadow-indigoo-100 duration-300'
         >
          <CardHeader className='p-2.5 pb-0'>
-          <Carousel className='shadow-md rounded-md w-full h-64  bg-transparent'>
+          <Carousel className=' rounded-md w-full h-64  bg-transparent'>
            <CarouselContent>
             {project.image.map((img, i) => (
              <CarouselItem key={i}>
@@ -207,28 +221,30 @@ const Projects = ({ id }) => {
            <CarouselDots />
           </Carousel>
          </CardHeader>
-         <CardContent className='px-5 pb-5 -mt-2'>
-          <CardTitle className='pb-2 font-medium text-indigoo-900 font-poppins tracking-wide text-shadow-2xs text-lg '>
-           {project.title}
+         <CardContent className='px-5 pb-5'>
+          <CardTitle>
+           {/* Tech Stack */}
+           <div className='flex flex-wrap gap-1.5 pb-3'>
+            {project.stack1.map((tech, i) => (
+             <Badge
+              key={i}
+              variant='secondary'
+              className='bg-indigoo-50 text-indigoo-400'
+             >
+              {tech}
+             </Badge>
+            ))}
+           </div>
           </CardTitle>
           <CardDescription>
            <div>
-            {/* Tech Stack */}
-            <div className='flex flex-wrap gap-1.5 pb-2'>
-             {project.stack.map((tech, i) => (
-              <Badge
-               key={i}
-               variant='secondary'
-               className='bg-indigoo-50 text-indigoo-600'
-              >
-               {tech}
-              </Badge>
-             ))}
+            <div className='pb-3 font-medium text-indigoo-800 font-poppins tracking-wide text-shadow-2xs text-2xl '>
+             {project.title}
             </div>
-            <div className='pb-5 text-justify'>
+            <div className='pb-10 text-justify'>
              {project.description}
-             <span className='ml-1 tracking-wide font-semibold font-mono '>
-              SEE MORE...
+             <span className='ml-1 tracking-wide font-semibold  text-indigoo-700 '>
+              See More...
              </span>
             </div>
            </div>
@@ -242,11 +258,12 @@ const Projects = ({ id }) => {
               onMouseEnter={() => iconRef2.current[i]?.startAnimation()}
               onMouseLeave={() => iconRef2.current[i]?.stopAnimation()}
              >
-              <a href={project.github} className=''>
+              <a href={project.github} className='flex text-xs font-semibold'>
                <GithubIcon
                 ref={(el) => (iconRef2.current[i] = el)}
                 className='relative z-10 '
                />
+               <span className=' ml-1 relative z-10'>Github</span>
               </a>
              </Button>
             )}
@@ -260,12 +277,12 @@ const Projects = ({ id }) => {
               onMouseEnter={() => iconRef.current[i]?.startAnimation()}
               onMouseLeave={() => iconRef.current[i]?.stopAnimation()}
              >
-              <a href={project.link} className='text-xs font-semibold '>
-               <span className='relative z-10'>Live Demo</span>
-               <LinkIcon
+              <a href={project.link} className=' text-xs font-semibold '>
+               <ArrowUpRightIcon
                 ref={(el) => (iconRef.current[i] = el)}
                 className='relative z-10'
                />
+               <span className='relative z-10'>Live Demo</span>
               </a>
              </Button>
             )}
@@ -276,8 +293,8 @@ const Projects = ({ id }) => {
        </div>
       </DrawerTrigger>
       <DrawerContent>
-       <ScrollArea className='h-[85vh]'>
-        <h2 className='text-center text-lg md:text-2xl pt-5  font-normal font-poppins tracking-wide text-shadow-2xs'>
+       <ScrollArea className='h-[85vh] font-inter'>
+        <h2 className='text-center text-lg md:text-2xl pt-5  font-medium text-indigoo-800 font-poppins tracking-wide text-shadow-2xs'>
          {project.title}
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 p-5 md:px-15 md:py-10'>
@@ -293,14 +310,18 @@ const Projects = ({ id }) => {
              </CarouselItem>
             ))}
            </CarouselContent>
-           <CarouselPrevious className='hidden md:grid' />
-           <CarouselNext className='hidden md:grid' />
+           <CarouselPrevious className='hidden md:grid text-indigoo-600 bg-indigoo-50 border-indigoo-300 hover:bg-indigoo-50 hover:text-indigoo-600 ' />
+           <CarouselNext className='hidden md:grid  text-indigoo-600 bg-indigoo-50 border-indigoo-300 hover:bg-indigoo-50 hover:text-indigoo-600' />
           </Carousel>
          </div>
          <div className='flex flex-col  md:justify-center'>
-          <div>
-           {project.stack.map((tech, i) => (
-            <Badge key={i} variant='secondary' className='mr-2 mb-5'>
+          <div className='mb-5'>
+           {project.stack2.map((tech, i) => (
+            <Badge
+             key={i}
+             variant='secondary'
+             className='mr-2 mb-2 bg-indigoo-50 text-indigoo-400'
+            >
              {tech}
             </Badge>
            ))}
