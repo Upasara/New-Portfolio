@@ -11,7 +11,6 @@ import { GithubIcon } from '../ui/github';
 import { LinkedinIcon } from '../ui/linkedin';
 import { InstagramIcon } from '../ui/instagram';
 import { ContainerTextFlip } from '../ui/container-text-flip';
-import { LayoutTextFlip } from '../ui/layout-text-flip';
 
 const Hero = ({ id }) => {
  const iconRef = useRef(null);

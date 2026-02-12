@@ -9,38 +9,6 @@ import ritti from '../../assets/comapany_logo/ritti.png';
 import google from '../../assets/comapany_logo/google-cloud.png';
 import { Badge } from '../ui/badge';
 
-const experiences = [
- {
-  role: 'IT Assistant',
-  company: 'P E Mathew & Company',
-  period: 'Oct 2024 – Present',
-  description:
-   'Tested and validated a new internal sales system, identified bugs, and collaborated with the sales team to improve system reliability.',
- },
- {
-  role: 'QA Intern',
-  company: 'Natures Beauty Creation',
-  period: 'Aug 2023 – Aug 2024',
-  description:
-   'Designed and developed modern web applications and portfolio websites using React, Tailwind CSS, and animation libraries.',
- },
- {
-  role: 'BSc (HONS) Software Engineering',
-  company: 'University of Plymouth',
-  period: ' 2020 –  2023',
-  description:
-   'Designed and developed modern web applications and portfolio websites using React, Tailwind CSS, and animation libraries.',
- },
- {
-  role:
-   'Computer Competency License Course Examination (NAITA) – NVQ level III',
-  company: 'Ranaviru Information Technology Training Institute',
-  period: ' Jan 2017 –  May 2017',
-  description:
-   'Designed and developed modern web applications and portfolio websites using React, Tailwind CSS, and animation libraries.',
- },
-];
-
 const Experience = ({ id }) => {
  const data = [
   {

@@ -4,10 +4,7 @@ import ME from '../../assets/me1.jpg';
 import ME2 from '../../assets/me2.jpg';
 import GYM from '../../assets/gym.jpg';
 import { BriefcaseBusiness } from 'lucide-react';
-import { FolderOpen } from 'lucide-react';
-import { Award } from 'lucide-react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
-import { useRef } from 'react';
 import { Button } from '../ui/button';
 
 const images = [
