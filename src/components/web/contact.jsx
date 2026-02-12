@@ -1,12 +1,7 @@
 import React from 'react';
 import { Field, FieldGroup, FieldLabel, FieldSet } from '../ui/field';
 import { Input } from '../ui/input';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
 import { Button } from '../ui/button';
-import { Github } from 'lucide-react';
-import { Linkedin } from 'lucide-react';
-import { Instagram } from 'lucide-react';
 import { AtSignIcon } from '../ui/at-sign';
 import { VibrateIcon } from '../ui/vibrate';
 import { GithubIcon } from '../ui/github';
@@ -16,10 +11,29 @@ import { LinkPreview } from '../ui/link-preview';
 import { useRef } from 'react';
 import { Send } from 'lucide-react';
 import { Badge } from '../ui/badge';
+import { useState } from 'react';
 
 const Contact = ({ id }) => {
  const iconRef1 = useRef(null);
  const iconRef2 = useRef(null);
+
+ const [result, setResult] = useState('');
+ const onSubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  formData.append('access_key', '1ce66ddd-2fec-4a91-98b7-d16537caa77f');
+
+  const res = await fetch('https://api.web3forms.com/submit', {
+   method: 'POST',
+   body: formData,
+  });
+
+  const data = await res.json();
+  setResult(
+   data.success ? 'Message sent successfully!' : 'Something went wrong.'
+  );
+ };
+
  return (
   <section
    id={id}
@@ -42,9 +56,14 @@ const Contact = ({ id }) => {
       Email
      </h3>
 
-     <Badge className='flex gap-2 mt-1 items-center text-base bg-indigoo-50 text-indigoo-600'>
-      <AtSignIcon ref={iconRef1} size={18} />
-      mihirangaupasara2000@gmail.com
+     <Badge className='mt-1 text-base bg-indigoo-50 text-indigoo-600'>
+      <a
+       href='mailto:mihirangaupasara2000@gmail.com'
+       className='flex gap-2 items-center'
+      >
+       <AtSignIcon ref={iconRef1} size={18} />
+       mihirangaupasara2000@gmail.com
+      </a>
      </Badge>
     </div>
     <div
@@ -55,9 +74,11 @@ const Contact = ({ id }) => {
      <h3 className=' text-xl font-semibold tracking-wide text-indigoo-800'>
       Phone
      </h3>
-     <Badge className='flex gap-2 mt-1 items-center text-base bg-indigoo-50 text-indigoo-600'>
-      <VibrateIcon ref={iconRef2} size={20} />
-      071 5641 280
+     <Badge className='mt-1 text-base bg-indigoo-50 text-indigoo-600'>
+      <a href='https://wa.me/+94715641280' className='flex gap-2  items-center'>
+       <VibrateIcon ref={iconRef2} size={20} />
+       071 5641 280
+      </a>
      </Badge>
     </div>
     {/* socials */}
@@ -66,17 +87,17 @@ const Contact = ({ id }) => {
      <div className='flex gap-4 mt-1'>
       <LinkPreview url='https://github.com/Upasara'>
        <button className='bg-transparent cursor-pointer'>
-        <GithubIcon className='text-purple-600' size={24} />
+        <GithubIcon className='text-indigoo-600' size={24} />
        </button>
       </LinkPreview>
       <LinkPreview url='https://www.linkedin.com/in/mihiranga-upasara/'>
        <button className='bg-transparent cursor-pointer'>
-        <LinkedinIcon className='text-purple-600' size={24} />
+        <LinkedinIcon className='text-indigoo-600' size={24} />
        </button>
       </LinkPreview>
       <LinkPreview url='https://www.instagram.com/mihiranga.upasara/'>
        <button className='bg-transparent cursor-pointer'>
-        <InstagramIcon className='text-purple-600' size={24} />
+        <InstagramIcon className='text-indigoo-600' size={24} />
        </button>
       </LinkPreview>
      </div>
@@ -84,7 +105,7 @@ const Contact = ({ id }) => {
    </div>
    {/* form */}
    <div className='px-0 md:px-15'>
-    <form>
+    <form onSubmit={onSubmit}>
      <FieldGroup>
       <FieldSet>
        <FieldGroup>
@@ -95,7 +116,8 @@ const Contact = ({ id }) => {
          <Input
           id='name'
           placeholder='John Doe'
-          className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md'
+          name='name'
+          className='border-indigoo-300 focus-visible:border-indigoo-600 focus-visible:ring-indigoo-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md focus-visible:shadow-indigoo-100 '
          />
         </Field>
         <Field>
@@ -103,20 +125,22 @@ const Contact = ({ id }) => {
          <Input
           id='email'
           placeholder='johndoe@gmail.com'
-          className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md'
+          name='email'
+          className='border-indigoo-300 focus-visible:border-indigoo-600 focus-visible:ring-indigoo-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md focus-visible:shadow-indigoo-100'
          />
         </Field>
         <Field>
          <FieldLabel htmlFor='message'>Message</FieldLabel>
          <Input
           id='message'
-          className='border-purple-300 focus-visible:border-purple-600 focus-visible:ring-purple-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md'
+          name='message'
+          className='border-indigoo-300 focus-visible:border-indigoo-600 focus-visible:ring-indigoo-600 focus-visible:ring-1 duration-300 transition-all focus-visible:shadow-md focus-visible:shadow-indigoo-100'
          />
         </Field>
         <Field>
          <Button
           type='submit'
-          className='bg-gradient shadow-md hover:shadow-lg group hover:scale-105 duration-300 hover:text-base '
+          className='bg-indigoo-600 hover:bg-indigoo-600 hover:shadow-indigoo-200 shadow-md hover:shadow-lg group hover:scale-105 duration-300 hover:text-base '
          >
           <Send className='group-hover:scale-110 duration-300' />
           Send
@@ -125,6 +149,7 @@ const Contact = ({ id }) => {
        </FieldGroup>
       </FieldSet>
      </FieldGroup>
+     <p>{result}</p>
     </form>
    </div>
   </section>

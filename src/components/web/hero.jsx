@@ -1,12 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import programmer from '../../assets/programmer1.png';
-import GradientIcon from './gradient-icon';
-import { Linkedin } from 'lucide-react';
-import { Github } from 'lucide-react';
-import { Instagram } from 'lucide-react';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
-import { FlipWords } from '../ui/flip-words';
 import { CardBody, CardContainer } from '../ui/3d-card';
 import { LinkPreview } from '../ui/link-preview';
 import { DownloadIcon } from '../ui/download';
@@ -15,13 +10,8 @@ import { FoldersIcon } from '../ui/folders';
 import { GithubIcon } from '../ui/github';
 import { LinkedinIcon } from '../ui/linkedin';
 import { InstagramIcon } from '../ui/instagram';
-
-const flipWords = [
- 'Software Engineer',
- 'IT Assistant',
- 'Web Developer',
- 'Social Media Manager',
-];
+import { ContainerTextFlip } from '../ui/container-text-flip';
+import { LayoutTextFlip } from '../ui/layout-text-flip';
 
 const Hero = ({ id }) => {
  const iconRef = useRef(null);
@@ -60,14 +50,19 @@ const Hero = ({ id }) => {
       </span>
      </h1>
      <div
-      className='lg:flex  text-3xl'
+      className='lg:flex items-center  text-3xl'
       data-aos='fade-right'
       data-aos-delay='600'
      >
       -
-      <FlipWords
-       words={flipWords}
-       className='font-mono font-semibold text-2xl md:text-3xl lg:text-4xl p-0'
+      <ContainerTextFlip
+       words={[
+        'IT Assistant',
+        'Software Engineer',
+        'Junior Executive',
+        'Web Developer',
+       ]}
+       textClassName='bg-transparent'
       />
      </div>
 
