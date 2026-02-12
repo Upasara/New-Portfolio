@@ -13,9 +13,11 @@ import Contact from './components/web/contact';
 import { useRef } from 'react';
 import Navbar from './components/web/navbar';
 import ClickSpark from './components/ClickSpark';
+import { useState } from 'react';
 
 function App() {
  const lenisRef = useRef(null);
+ const [activeSection, setActiveSection] = useState('hero');
 
  // Initialize AOS and Lenis smooth scroll
  useEffect(() => {
@@ -43,6 +45,47 @@ function App() {
   };
  }, []);
 
+ //auto scroll highlight
+ /* =========================
+     AUTO NAVBAR HIGHLIGHT
+  ========================== */
+ useEffect(() => {
+  const sections = [
+   'hero',
+   'bio',
+   'projects',
+   'skills',
+   'experience',
+   'contact',
+  ];
+
+  const observer = new IntersectionObserver(
+   (entries) => {
+    entries.forEach((entry) => {
+     if (entry.isIntersecting) {
+      setActiveSection(entry.target.id);
+     }
+    });
+   },
+   {
+    rootMargin: '-40% 0px -40% 0px',
+    // Activates section when near center of screen
+   }
+  );
+
+  sections.forEach((id) => {
+   const el = document.getElementById(id);
+   if (el) observer.observe(el);
+  });
+
+  return () => {
+   sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.unobserve(el);
+   });
+  };
+ }, []);
+
  const scrollToSection = (id) => {
   if (!lenisRef.current) {
    return;
@@ -62,7 +105,7 @@ function App() {
     sparkCount={8}
     duration={400}
    >
-    <Navbar navigate={scrollToSection} />
+    <Navbar navigate={scrollToSection} activeSection={activeSection} />
     <Hero id='hero' />
     <Bio id='bio' navigate={scrollToSection} />
     <Projects id='projects' />
