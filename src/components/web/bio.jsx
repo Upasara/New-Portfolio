@@ -111,7 +111,7 @@ const Bio = ({ id, navigate }) => {
 
    <div className=' flex flex-col md:flex-row items-center justify-center md:gap-6 gap-6 gap-y-3 mt-2 lg:mt-5 mb-10 '>
     <Button
-     className='group bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
+     className='group w-56 bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
      data-aos='fade-up-right'
      onClick={() => navigate('experience')}
     >
@@ -129,7 +129,7 @@ const Bio = ({ id, navigate }) => {
      </div>
     </Button>
     <Button
-     className='group bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
+     className='group w-56 bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
      data-aos='fade-up'
      onClick={() => navigate('projects')}
     >
@@ -147,7 +147,7 @@ const Bio = ({ id, navigate }) => {
      </div>
     </Button>
     <Button
-     className='group bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
+     className='group w-56 bg-indigoo-50 border-2 border-indigoo-600 py-8 px-8 rounded-lg shadow-md hover:bg-indigoo-50 hover:shadow-lg duration-300 '
      data-aos='fade-up-left'
      onClick={() => navigate('experience')}
     >

@@ -291,10 +291,13 @@ const Experience = ({ id }) => {
    <h1
     className='text-center text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
     data-aos='fade-up'
+    data-aos-delay={400}
    >
     Experience & Education
    </h1>
-   <Timeline data={data} />
+   <div data-aos='fade-up' data-aos-delay={400}>
+    <Timeline data={data} />
+   </div>
   </section>
  );
 };

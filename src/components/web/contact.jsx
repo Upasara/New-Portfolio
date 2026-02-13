@@ -44,6 +44,7 @@ const Contact = ({ id }) => {
     <h1
      className='text-left text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl pb-10 '
      data-aos='fade-up'
+     data-aos-delay={400}
     >
      Contact Me
     </h1>
@@ -51,6 +52,8 @@ const Contact = ({ id }) => {
      className='flex mb-7 text-lg flex-col items-center'
      onMouseEnter={() => iconRef1.current.startAnimation()}
      onMouseLeave={() => iconRef1.current.stopAnimation()}
+     data-aos='fade-right'
+     data-aos-delay={600}
     >
      <h3 className=' text-xl font-semibold tracking-wide text-indigoo-800'>
       Email
@@ -70,6 +73,8 @@ const Contact = ({ id }) => {
      className='flex  mb-7 text-lg flex-col items-center'
      onMouseEnter={() => iconRef2.current.startAnimation()}
      onMouseLeave={() => iconRef2.current.stopAnimation()}
+     data-aos='fade-right'
+     data-aos-delay={800}
     >
      <h3 className=' text-xl font-semibold tracking-wide text-indigoo-800'>
       Phone
@@ -82,7 +87,11 @@ const Contact = ({ id }) => {
      </Badge>
     </div>
     {/* socials */}
-    <div className='flex flex-col items-center'>
+    <div
+     className='flex flex-col items-center'
+     data-aos='fade-right'
+     data-aos-delay={1000}
+    >
      <h3 className=' text-xl font-semibold tracking-wide mb-2'>Social</h3>
      <div className='flex gap-4 mt-1'>
       <LinkPreview url='https://github.com/Upasara'>
@@ -105,7 +114,7 @@ const Contact = ({ id }) => {
    </div>
    {/* form */}
    <div className='px-0 md:px-15'>
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} data-aos='fade-left' data-aos-delay={1200}>
      <FieldGroup>
       <FieldSet>
        <FieldGroup>

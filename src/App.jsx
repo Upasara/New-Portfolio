@@ -1,7 +1,6 @@
 import './App.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Lenis from 'lenis';
 import { useEffect } from 'react';
 import Hero from './components/web/hero';
 import Bio from './components/web/bio';
@@ -10,39 +9,17 @@ import Skills from './components/web/skills';
 import Experience from './components/web/experience';
 import Contact from './components/web/contact';
 
-import { useRef } from 'react';
 import Navbar from './components/web/navbar';
 import ClickSpark from './components/ClickSpark';
 import { useState } from 'react';
+import { useRef } from 'react';
 
 function App() {
- const lenisRef = useRef(null);
  const [activeSection, setActiveSection] = useState('hero');
 
  // Initialize AOS and Lenis smooth scroll
  useEffect(() => {
   Aos.init({ duration: 1000, once: false });
-
-  const lenis = new Lenis({
-   duration: 0.5,
-   smoothWheel: true,
-   easing: (t) => t,
-   prevent: (node) => node?.hasAttribute('data-lenis-prevent'),
-  });
-
-  lenisRef.current = lenis;
-
-  let rafId;
-  const raf = (time) => {
-   lenis.raf(time);
-   rafId = requestAnimationFrame(raf);
-  };
-  rafId = requestAnimationFrame(raf);
-
-  return () => {
-   cancelAnimationFrame(rafId);
-   lenis.destroy();
-  };
  }, []);
 
  //auto scroll highlight
@@ -86,14 +63,35 @@ function App() {
   };
  }, []);
 
- const scrollToSection = (id) => {
-  if (!lenisRef.current) {
-   return;
-  }
-  const el = document.getElementById(id);
-  if (el) {
-   lenisRef.current.scrollTo(el, { duration: 0.8 });
-  }
+ const scrollToSection = (id, duration = 900) => {
+  const target = document.getElementById(id);
+  if (!target) return;
+  const navbarHeight = 80;
+
+  const startY = window.scrollY;
+  const targetY =
+   target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+  const distance = targetY - startY;
+  const startTime = performance.now();
+
+  const easeInOutCubic = (t) =>
+   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const animate = (currentTime) => {
+   const elapsed = currentTime - startTime;
+   const progress = Math.min(elapsed / duration, 1);
+
+   const easedProgress = easeInOutCubic(progress);
+
+   window.scrollTo(0, startY + distance * easedProgress);
+
+   if (progress < 1) {
+    requestAnimationFrame(animate);
+   }
+  };
+
+  requestAnimationFrame(animate);
  };
 
  return (
@@ -106,7 +104,7 @@ function App() {
     duration={400}
    >
     <Navbar navigate={scrollToSection} activeSection={activeSection} />
-    <Hero id='hero' />
+    <Hero id='hero' navigate={scrollToSection} />
     <Bio id='bio' navigate={scrollToSection} />
     <Projects id='projects' />
     <Skills id='skills' />

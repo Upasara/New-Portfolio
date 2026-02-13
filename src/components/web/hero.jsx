@@ -12,7 +12,7 @@ import { LinkedinIcon } from '../ui/linkedin';
 import { InstagramIcon } from '../ui/instagram';
 import { ContainerTextFlip } from '../ui/container-text-flip';
 
-const Hero = ({ id }) => {
+const Hero = ({ id, navigate }) => {
  const iconRef = useRef(null);
  const iconRef2 = useRef(null);
  return (
@@ -93,6 +93,7 @@ const Hero = ({ id }) => {
        size='sm'
        onMouseEnter={() => iconRef2.current.startAnimation()}
        onMouseLeave={() => iconRef2.current.stopAnimation()}
+       onClick={() => navigate('projects')}
       >
        View Projects <FoldersIcon ref={iconRef2} />
       </Button>

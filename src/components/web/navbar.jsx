@@ -34,7 +34,7 @@ const Navbar = ({ navigate, activeSection }) => {
       <Tooltip>
        <TooltipTrigger asChild>
         <button
-         onClick={() => navigate(items.target)}
+         onClick={() => navigate(items.target, 1200)}
          className={`group hover:-translate-y-1 hover:text-4xl duration-300 transition-all ${
           activeSection === items.target
            ? 'text-indigoo-700  scale-110 text-shadow-md -translate-y-1'
