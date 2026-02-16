@@ -50,6 +50,7 @@ import Pemcore1 from '../../assets/projects/pemcore/pemcore-1.png';
 import Pemcore2 from '../../assets/projects/pemcore/pemcore-2.png';
 import Pemcore3 from '../../assets/projects/pemcore/pemcore-3.png';
 import Pemcore4 from '../../assets/projects/pemcore/pemcore-4.png';
+import Autoplay from 'embla-carousel-autoplay';
 
 const projects = [
  {
@@ -231,14 +232,17 @@ const Projects = ({ id }) => {
          className='p-0 hover:scale-105 transition-all shadow-md  hover:shadow-lg cursor-pointer font-inter border-2 border-indigoo-100 hover:shadow-indigoo-100 duration-300'
         >
          <CardHeader className='p-2.5 pb-0'>
-          <Carousel className=' rounded-md w-full h-64  bg-transparent'>
+          <Carousel
+           className=' rounded-md w-full h-64  bg-transparent'
+           plugins={[Autoplay({ delay: 3000 })]}
+          >
            <CarouselContent>
             {project.image.map((img, i) => (
              <CarouselItem key={i}>
               <img
                src={img}
                alt={img}
-               className='rounded-md w-full h-64 object-cover'
+               className='rounded-md w-full h-64 object-contain'
               />
              </CarouselItem>
             ))}

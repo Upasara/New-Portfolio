@@ -1,11 +1,14 @@
 import React from 'react';
 import Stack from '../Stack';
-import ME from '../../assets/me1.jpg';
-import ME2 from '../../assets/me2.JPG';
-import GYM from '../../assets/gym.jpg';
 import { BriefcaseBusiness } from 'lucide-react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
 import { Button } from '../ui/button';
+
+//images
+import ME from '../../assets/me1.jpg';
+import ME2 from '../../assets/me2.JPG';
+import ME3 from '../../assets/me3.jpeg';
+import ME4 from '../../assets/me4.png';
 
 const images = [
  {
@@ -14,11 +17,15 @@ const images = [
  },
  {
   image: ME2,
-  text: 'I like cars',
+  text: 'graduation',
  },
  {
-  image: GYM,
-  text: 'I am fit',
+  image: ME3,
+  text: 'pemco',
+ },
+ {
+  image: ME4,
+  text: 'hobby',
  },
 ];
 
@@ -53,7 +60,7 @@ const data = [
    'Currently, I work as an IT Assistant at PE Mathew Company, contributing beyond traditional IT support by developing and maintaining internal business systems. My work includes designing and deploying secure centralized database systems, developing web-based employee management and HR automation systems with role-based access, and handling network troubleshooting, IT asset management, website maintenance, and digital platforms 🌐🛠️.',
   content: (
    <div>
-    <img src={GYM} alt='My Self' className='w-full h-auto rounded-lg' />
+    <img src={ME3} alt='My Self' className='w-full h-auto rounded-lg' />
    </div>
   ),
  },
@@ -63,7 +70,7 @@ const data = [
    'In addition to my industry experience, I hold Google Cloud certifications, including Google Cloud Fundamentals – Core Infrastructure and Generative AI certifications covering large language models (LLMs) and responsible AI practices ☁️🤖. Outside of work, I am passionate about motorsports (Formula 1 & NASCAR) 🏎️, enjoy watching movies—especially comic-based films 🎬, and value continuous learning, teamwork, and problem-solving 💡.',
   content: (
    <div>
-    <img src={GYM} alt='My Self' className='w-full h-auto rounded-lg' />
+    <img src={ME4} alt='My Self' className='w-full h-auto rounded-lg' />
    </div>
   ),
  },
