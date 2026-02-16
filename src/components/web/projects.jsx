@@ -46,10 +46,10 @@ import Iot3 from '../../assets/projects/iot/iot-3.PNG';
 import Rathaya1 from '../../assets/projects/rathaya/rathaya-1.png';
 import Rathaya2 from '../../assets/projects/rathaya/rathaya-2.png';
 import Rathaya3 from '../../assets/projects/rathaya/rathaya-3.png';
-import Pemcore1 from '../../assets/projects/pemcore/pemcore-1.png'
-import Pemcore2 from '../../assets/projects/pemcore/pemcore-2.png'
-import Pemcore3 from '../../assets/projects/pemcore/pemcore-3.png'
-import Pemcore4 from '../../assets/projects/pemcore/pemcore-4.png'
+import Pemcore1 from '../../assets/projects/pemcore/pemcore-1.png';
+import Pemcore2 from '../../assets/projects/pemcore/pemcore-2.png';
+import Pemcore3 from '../../assets/projects/pemcore/pemcore-3.png';
+import Pemcore4 from '../../assets/projects/pemcore/pemcore-4.png';
 
 const projects = [
  {
@@ -190,7 +190,7 @@ const projects = [
  },
  {
   title: 'PEMcore 🖥️',
-  image: [p=],
+  image: [Pemcore1, Pemcore2, Pemcore3, Pemcore4],
   description:
    'Designed and implemented a secure centralized data storage system to replace fragmented, department-level file handling at P. E. Mathew & Company.',
   seeMore1:
