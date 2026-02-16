@@ -6,10 +6,6 @@ import {
  CardHeader,
  CardTitle,
 } from '../ui/card';
-
-import SmartSpend from '../../assets/projects/smart-spend.png';
-import Emsys from '../../assets/projects/emsys2.png';
-import WeatherSnap from '../../assets/projects/weather-snap.png';
 import { Button } from '../ui/button';
 import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
 import { Badge } from '../ui/badge';
@@ -26,10 +22,39 @@ import {
 import { ScrollArea } from '../ui/scroll-area';
 import { ArrowUpRightIcon } from '../ui/arrow-up-right';
 
+//project images
+import SmartSpend1 from '../../assets/projects/smartSpend/smart-spend-1.png';
+import SmartSpend2 from '../../assets/projects/smartSpend/smart-spend-2.png';
+import SmartSpend3 from '../../assets/projects/smartSpend/smart-spend-3.png';
+import SmartSpend4 from '../../assets/projects/smartSpend/smart-spend-4.png';
+import SmartSpend5 from '../../assets/projects/smartSpend/smart-spend-5.png';
+import Emsys1 from '../../assets/projects/emsys-1.png';
+import Emsys2 from '../../assets/projects/emsys-2.png';
+import Emsys3 from '../../assets/projects/emsys-3.png';
+import Emsys4 from '../../assets/projects/emsys-4.png';
+import Emsys5 from '../../assets/projects/emsys-5.png';
+import WeatherSnap1 from '../../assets/projects/weather-snap-1.png';
+import WeatherSnap2 from '../../assets/projects/weather-snap-2.png';
+import WeatherSnap3 from '../../assets/projects/weather-snap-3.png';
+import Tefmasys1 from '../../assets/projects/tefmasys/tefmasys-1.jpg';
+import Tefmasys2 from '../../assets/projects/tefmasys/tefmasys-2.jpg';
+import Tefmasys3 from '../../assets/projects/tefmasys/tefmasys-3.png';
+import Tefmasys4 from '../../assets/projects/tefmasys/tefmasys-4.png';
+import Iot1 from '../../assets/projects/iot/iot-1.jpg';
+import Iot2 from '../../assets/projects/iot/iot-2.jpg';
+import Iot3 from '../../assets/projects/iot/iot-3.PNG';
+import Rathaya1 from '../../assets/projects/rathaya/rathaya-1.png';
+import Rathaya2 from '../../assets/projects/rathaya/rathaya-2.png';
+import Rathaya3 from '../../assets/projects/rathaya/rathaya-3.png';
+import Pemcore1 from '../../assets/projects/pemcore/pemcore-1.png'
+import Pemcore2 from '../../assets/projects/pemcore/pemcore-2.png'
+import Pemcore3 from '../../assets/projects/pemcore/pemcore-3.png'
+import Pemcore4 from '../../assets/projects/pemcore/pemcore-4.png'
+
 const projects = [
  {
   title: 'Smart Spend 💸',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [SmartSpend1, SmartSpend2, SmartSpend3, SmartSpend4, SmartSpend5],
   description:
    'SmartSpend is a full-stack web application that helps users track income and expenses, manage multiple accounts, set budgets, and gain actionable financial insights.',
   seeMore1:
@@ -53,7 +78,7 @@ const projects = [
  },
  {
   title: 'EMSys 👩🏻‍💻',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [Emsys1, Emsys2, Emsys3, Emsys4, Emsys5],
   description:
    'EMSys is a full-stack web-based HR system that centralizes employee records, departments, salaries, and leave management, replacing manual and spreadsheet-based workflows.',
   seeMore1:
@@ -77,7 +102,7 @@ const projects = [
  },
  {
   title: 'Weather Snap 🌤️',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [WeatherSnap1, WeatherSnap2, WeatherSnap3],
   description:
    'WeatherSnap is a responsive, web-based weather forecasting application that provides real-time weather information based on city search or user’s current location.',
   seeMore1:
@@ -98,7 +123,7 @@ const projects = [
  },
  {
   title: 'TeFMaSys 🍃',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [Tefmasys1, Tefmasys2, Tefmasys3, Tefmasys4],
   description:
    'TEFMASYS is a dual-platform tea farmer management system that improves communication and transparency between farmers and tea factory management in Sri Lanka.',
   seeMore1:
@@ -122,7 +147,7 @@ const projects = [
  },
  {
   title: 'Smart Irrigation System 🌊',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [Iot1, Iot2, Iot3],
   description:
    'The Smart Irrigation System is an IoT-enabled agriculture solution designed to improve water efficiency and support optimal crop growth through real-time environmental monitoring.',
   seeMore1:
@@ -144,7 +169,7 @@ const projects = [
  },
  {
   title: 'Rathaya 🚗',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [Rathaya1, Rathaya2, Rathaya3],
   description:
    'Rathaya is a full-stack, web-based auto parts ordering platform designed to simplify how customers discover, verify, and purchase vehicle spare parts from a trusted auto shop.',
   seeMore1:
@@ -165,7 +190,7 @@ const projects = [
  },
  {
   title: 'PEMcore 🖥️',
-  image: [SmartSpend, Emsys, WeatherSnap],
+  image: [p=],
   description:
    'Designed and implemented a secure centralized data storage system to replace fragmented, department-level file handling at P. E. Mathew & Company.',
   seeMore1:
