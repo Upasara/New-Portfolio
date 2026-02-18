@@ -12,7 +12,8 @@ import Contact from './components/web/contact';
 import Navbar from './components/web/navbar';
 import ClickSpark from './components/ClickSpark';
 import { useState } from 'react';
-import { useRef } from 'react';
+import { ConfettiBackground } from './components/ui/confetti';
+import { Toaster } from 'sonner';
 
 function App() {
  const [activeSection, setActiveSection] = useState('hero');
@@ -95,7 +96,7 @@ function App() {
  };
 
  return (
-  <div className=' text-indigoo-900 bg-primary-bg '>
+  <div className=' text-indigoo-900 bg-transparent '>
    <ClickSpark
     sparkColor='#000000'
     sparkSize={10}
@@ -110,7 +111,9 @@ function App() {
     <Skills id='skills' />
     <Experience id='experience' />
     <Contact id='contact' />
+    <Toaster richColors />
    </ClickSpark>
+   <ConfettiBackground />
   </div>
  );
 }

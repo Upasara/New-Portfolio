@@ -9,6 +9,7 @@ import ME from '../../assets/me1.jpg';
 import ME2 from '../../assets/me2.JPG';
 import ME3 from '../../assets/me3.jpeg';
 import ME4 from '../../assets/me4.png';
+import { ConfettiBackground } from '../ui/confetti';
 
 const images = [
  {
@@ -78,7 +79,7 @@ const data = [
 
 const Bio = ({ id, navigate }) => {
  return (
-  <section id={id} className='min-h-screen  p-5  md:p-10  bg-white  '>
+  <section id={id} className='min-h-screen  p-5  md:p-10  bg-white/80  '>
    <h1
     className='text-center text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl mb-5 mt-15 '
     data-aos='fade-up'

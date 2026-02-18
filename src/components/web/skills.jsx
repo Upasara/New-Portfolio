@@ -78,7 +78,7 @@ const toolLogo = [
 
 const Skills = ({ id }) => {
  return (
-  <section id={id} className='p-5 bg-white'>
+  <section id={id} className='p-5 bg-white/80'>
    <h1
     className='text-center text-indigoo-600 text-shadow-sm font-poppins font-semibold text-4xl lg:text-5xl mb-5 pt-10 pb-10 '
     data-aos='fade-up'

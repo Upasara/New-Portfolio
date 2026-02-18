@@ -12,32 +12,49 @@ import { useRef } from 'react';
 import { Send } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 const Contact = ({ id }) => {
  const iconRef1 = useRef(null);
  const iconRef2 = useRef(null);
 
- const [result, setResult] = useState('');
  const onSubmit = async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
+
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const message = formData.get('message');
+
+  if (!name || !email || !message) {
+   toast.error('Please fill in all fields !');
+   return;
+  }
+
   formData.append('access_key', '1ce66ddd-2fec-4a91-98b7-d16537caa77f');
 
-  const res = await fetch('https://api.web3forms.com/submit', {
-   method: 'POST',
-   body: formData,
-  });
+  try {
+   const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData,
+   });
 
-  const data = await res.json();
-  setResult(
-   data.success ? 'Message sent successfully!' : 'Something went wrong.'
-  );
+   const data = await res.json();
+   if (data.success) {
+    toast.success('Message sent successfully !');
+    form.reset();
+   } else {
+    toast.error('Something went wrong ! Please try again.');
+   }
+  } catch {
+   toast.error('Network error ! Please try again.');
+  }
  };
 
  return (
   <section
    id={id}
-   className='grid grid-cols-1 md:grid-cols-2 p-5 pb-10 pt-20 md:pt-28 bg-white min-h-screen font-inter'
+   className='grid grid-cols-1 md:grid-cols-2 p-5 pb-10 pt-20 md:pt-28 bg-white/80 min-h-screen font-inter'
   >
    {/* socials */}
    <div className='flex flex-col items-center'>
@@ -158,7 +175,6 @@ const Contact = ({ id }) => {
        </FieldGroup>
       </FieldSet>
      </FieldGroup>
-     <p>{result}</p>
     </form>
    </div>
   </section>
