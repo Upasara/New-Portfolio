@@ -11,7 +11,6 @@ import { LinkPreview } from '../ui/link-preview';
 import { useRef } from 'react';
 import { Send } from 'lucide-react';
 import { Badge } from '../ui/badge';
-import { useState } from 'react';
 import { toast } from 'sonner';
 
 const Contact = ({ id }) => {
@@ -20,7 +19,8 @@ const Contact = ({ id }) => {
 
  const onSubmit = async (e) => {
   e.preventDefault();
-  const formData = new FormData(e.target);
+  const form = e.target;
+  const formData = new FormData(form);
 
   const name = formData.get('name');
   const email = formData.get('email');
@@ -40,6 +40,7 @@ const Contact = ({ id }) => {
    });
 
    const data = await res.json();
+
    if (data.success) {
     toast.success('Message sent successfully !');
     form.reset();
@@ -47,14 +48,14 @@ const Contact = ({ id }) => {
     toast.error('Something went wrong ! Please try again.');
    }
   } catch {
-   toast.error('Network error ! Please try again.');
+   toast.error(res.error.message || 'Network error ! Please try again.');
   }
  };
 
  return (
   <section
    id={id}
-   className='grid grid-cols-1 md:grid-cols-2 p-5 pb-10 pt-20 md:pt-28 bg-white/80 min-h-screen font-inter'
+   className='grid grid-cols-1 md:grid-cols-2 p-5 pb-40 pt-20 md:pt-28 bg-white/80  font-inter'
   >
    {/* socials */}
    <div className='flex flex-col items-center'>
